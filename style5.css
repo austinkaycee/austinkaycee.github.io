@@ -1,0 +1,1307 @@
+html {
+    scroll-behavior: smooth;
+}
+/* =========================================
+   BRAND COLORS
+========================================= */
+:root {
+    --navy: #001f3f;
+    --gold: #C9A20B;
+    --white: #ffffff;
+}
+
+/* =========================================
+   GLOBAL RESET
+========================================= */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} 
+
+/* ===============================
+   NAVBAR / HEADER
+   (styles used by header.html)
+================================= */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.navbar {
+  background-color: #fff;
+  padding: 1.2rem 0;
+  border-bottom: 1px solid #eee;
+}
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.logo a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.logo a img {
+  display: block;
+  height: 40px;
+  width: auto;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.8rem;
+}
+
+.nav-links a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #13277e;
+}
+
+.btn-signup {
+  background: linear-gradient(90deg, #fff9d9, #ffe78b);
+  color: #13277e !important;
+  padding: 0.6rem 1.4rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  border: 1px solid #e0e0e0;
+  transition: all 0.3s ease;
+}
+
+.btn-signup:hover {
+  background: linear-gradient(90deg, #fff2b0, #ffd46b);
+  color: #000 !important;
+}
+
+/* Header Styling */
+.main-header {
+  background-color: #ffffff;
+  padding: 15px 100px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  position: relative;
+  height: 94px;
+  z-index: 100;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-header .logo img {
+  height: 46px;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+}
+
+.main-nav ul li {
+  margin-left: 50px;
+  margin-top: 14px;
+}
+
+.main-nav ul li a {
+  text-decoration: none;
+  color: #6c6c6c;
+  transition: color 0.3s ease;
+  font-family: Arial, sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 100%;
+}
+
+/* Generic button base (for header, if needed) */
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  border: none;
+  height: 52px;
+  width: 150px;
+}
+
+.main-nav .btn {
+  margin-left: 30px;
+}
+
+/* Dropdown Styling */
+.nav-links li {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  list-style: none;
+  padding: 10px 0;
+  min-width: 200px;
+  z-index: 999;
+}
+
+.dropdown-menu li {
+  margin: 0;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 10px 20px;
+  color: #6c6c6c;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #13277e;
+  color: #fff;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+
+/* ===============================
+   RESET & GLOBAL STYLES
+================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --navy: #13277e;
+  --gold: #f0b322; /* adjust if you want a different gold tone */
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  background-color: #fff;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+a {
+  color: inherit;
+}
+
+/* ================= HERO SECTION ============ HERO SECTION ============ HERO SECTION ============ HERO SECTION ================= */
+.cyber-hero {
+  position: relative;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+
+.cyber-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: -2;
+}
+
+/* Dark overlay */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: -1;
+}
+
+.hero-content {
+  max-width: 850px;
+  padding: 20px;
+}
+
+.tag {
+  font-size: 0.8rem;
+  letter-spacing: 3px;
+  color: var(--gold);
+  margin-bottom: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.hero-content h1 {
+  color: whitesmoke;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.subtext {
+  color: #eaeaea;
+  font-size: 1.05rem;
+  margin-bottom: 30px;
+}
+
+/* Gold main button */
+.gold-btn {
+  display: inline-block;
+  padding: 14px 40px;
+  background: var(--gold);
+  color: var(--navy);
+  font-weight: 600;
+  border-radius: 40px;
+  text-decoration: none;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.gold-btn:hover {
+  background: #d89c19;
+  transform: translateY(-2px);
+}
+.dual-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.enroll-btn-secondary {
+  background: transparent;
+  border: 2px solid #f0b322;
+  color: #f0b322;
+  padding: 10px 26px;
+  font-weight: 600;
+  border-radius: 40px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.enroll-btn-secondary:hover {
+  background: #f0b322;
+  color: #13277e;
+}
+/* ============ VIDEOS SECTION ============ */
+.cyber-videos {
+  padding: 60px 0 80px;
+  background: #f7f8fc;
+  text-align: center;
+}
+
+.cyber-videos h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 10px;
+}
+
+.section-subtext {
+  max-width: 650px;
+  margin: 0 auto 40px auto;
+  color: #555;
+  font-size: 1rem;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.8rem;
+}
+
+/* Card styles */
+.video-card {
+  background: #fff;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.video-thumb {
+  width: 100%;
+  height: 160px;
+  background: #0b1025;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.video-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-body {
+  padding: 16px 20px 10px;
+}
+
+.video-body h3 {
+  font-size: 1.05rem;
+  color: var(--navy);
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.video-meta {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.video-desc {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 14px;
+  line-height: 1.5;
+}
+
+.card-btn {
+  margin: 0 20px 16px;
+  display: inline-block;
+  padding: 9px 20px;
+  background: var(--gold);
+  color: var(--navy);
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.card-btn:hover {
+  background: #d89c19;
+  transform: translateY(-1px);
+}
+
+/* ============ SCROLL ANIMATION ============ */
+/* Start hidden */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* When visible in viewport */
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 700px) {
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .subtext {
+    font-size: 0.95rem;
+  }
+
+  .cyber-hero {
+    height: 80vh;
+  }
+}
+/* ===============================
+   END 			END  	END
+================================= */
+
+
+
+
+/* =====================================================================================
+==  ================ ENROL SECTION STYLES ===================
+================================================================================= */
+.enroll-section {
+  padding: 70px 0 80px;
+     padding-bottom: 120px;
+  background: #f5f6fa;
+}
+
+.enroll-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 2.2fr) minmax(260px, 1fr);
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.enroll-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #13277e; /* navy */
+  margin-bottom: 10px;
+}
+
+.enroll-subtitle {
+  font-size: 0.98rem;
+  color: #555;
+  max-width: 720px;
+  margin-bottom: 25px;
+}
+
+/* Modules */
+.enroll-modules h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #13277e;
+  margin-bottom: 10px;
+}
+
+.enroll-modules-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 10px 30px;
+}
+
+.enroll-modules-grid ul {
+  list-style: disc;
+  padding-left: 18px;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* Benefits */
+.enroll-benefits {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  margin-top: 30px;
+}
+
+.benefit-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 14px 16px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
+}
+
+.benefit-card h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #13277e;
+  margin-bottom: 6px;
+}
+
+.benefit-card p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Pricing card */
+.enroll-pricing {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.pricing-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 22px 22px 20px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+  max-width: 320px;
+  margin-left: auto;
+}
+
+.pricing-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #777;
+  margin-bottom: 8px;
+}
+
+.pricing-amount {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #13277e;
+}
+
+.pricing-note {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 14px;
+}
+
+.pricing-includes {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.pricing-includes li {
+  margin-bottom: 6px;
+}
+
+.pricing-btn {
+  display: block;
+  text-align: center;
+  padding: 10px 0;
+  border-radius: 999px;
+  background: #f0b322; /* gold */
+  color: #13277e;      /* navy */
+  font-weight: 600;
+  text-decoration: none;
+  margin-bottom: 10px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+  transition: 0.2s ease;
+}
+
+.pricing-btn:hover {
+  background: #d89c19;
+  transform: translateY(-1px);
+}
+
+.pricing-small {
+  font-size: 0.85rem;
+  color: #777;
+}
+
+.pricing-small a {
+  color: #13277e;
+  text-decoration: underline;
+}
+
+/* Testimonials */
+/* === Testimonials Section === */
+/* === Testimonials Section === */
+.testimonial-section {
+  padding: 60px 0;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.testimonial-heading {
+  text-align: center;
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #13277e;
+  margin-bottom: 25px;
+}
+
+/* Slider */
+.testimonial-slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.testimonial-track {
+  display: flex;
+  gap: 20px;
+  animation: slideLeft 16s linear infinite;
+}
+
+/* Card Style */
+.t-card {
+  min-width: 320px;
+  max-width: 320px;
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  border-left: 4px solid #f0b322;
+}
+
+.stars {
+  color: #f0b322;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.t-text {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.t-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #13277e;
+}
+
+/* Animation */
+@keyframes slideLeft {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Scroll Reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .t-card {
+    min-width: 260px;
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .t-card {
+    min-width: 260px;
+  }
+}
+/* Responsive */
+@media (max-width: 900px) {
+  .enroll-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .enroll-pricing {
+    justify-content: flex-start;
+    margin-top: 20px;
+  }
+
+  .pricing-card {
+    max-width: 100%;
+  }
+}
+/* =====================================================================================
+== END  		END  		END  		END ======
+================================================================================= */
+
+
+
+/* =====================================================================================
+== CYBER COURSES SECTION (LinkedIn-style combo) ======
+================================================================================= */
+:root {
+  --cs-navy: #13277e;
+  --cs-gold: #f0b322;
+}
+
+/* container (reuses your width style but scoped) */
+.cs-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* layout */
+.cs-courses {
+  padding: 60px 0 80px;
+  background: #ffffff;
+}
+
+.cs-courses-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 2.2fr) minmax(260px, 1fr);
+  gap: 40px;
+}
+
+/* header */
+.cs-breadcrumb {
+  font-size: 0.8rem;
+  color: #777;
+  margin-bottom: 6px;
+}
+
+.cs-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--cs-navy);
+  margin-bottom: 10px;
+}
+
+.cs-intro {
+  font-size: 0.98rem;
+  color: #555;
+  max-width: 720px;
+}
+
+/* trending */
+.cs-trending {
+  margin-top: 35px;
+}
+
+.cs-trending-heading {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--cs-navy);
+  margin-bottom: 16px;
+}
+
+.cs-trending-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.cs-trending-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.cs-card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.cs-trending-thumb {
+  position: relative;
+  height: 130px;
+  background: #f5f5f5;
+}
+
+.cs-trending-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cs-duration-badge {
+  position: absolute;
+  bottom: 6px;
+  right: 6px;
+  background: rgba(19, 39, 126, 0.9);
+  color: #fff;
+  font-size: 0.75rem;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.cs-duration-badge.cs-small {
+  font-size: 0.7rem;
+}
+
+.cs-trending-body {
+  padding: 10px 12px 12px;
+}
+
+.cs-course-tag {
+  font-size: 0.7rem;
+  color: #999;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.cs-trending-body h4 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--cs-navy);
+  margin: 4px 0 2px;
+}
+
+.cs-trending-meta {
+  font-size: 0.8rem;
+  color: #777;
+}
+
+/* long list rows */
+.cs-list {
+  margin-top: 32px;
+}
+
+.cs-course-row {
+  border-bottom: 1px solid #eee;
+}
+
+.cs-row-link {
+  display: flex;
+  align-items: center;
+  padding: 18px 0;
+  text-decoration: none;
+  color: inherit;
+}
+
+.cs-course-thumb {
+  width: 190px;
+  height: 115px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f4f4f4;
+  margin-right: 18px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.cs-course-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cs-course-body h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--cs-navy);
+  margin: 2px 0 2px;
+}
+
+.cs-course-author {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.cs-course-meta {
+  font-size: 0.78rem;
+  color: #888;
+}
+
+/* footer */
+.cs-list-footer {
+  padding-top: 22px;
+}
+
+.cs-list-footer p {
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+
+.cs-gold-btn {
+  padding: 10px 26px;
+  border-radius: 999px;
+  border: none;
+  background: var(--cs-gold);
+  color: var(--cs-navy);
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+  transition: 0.2s ease;
+}
+
+.cs-gold-btn:hover {
+  background: #d89c19;
+  transform: translateY(-1px);
+}
+
+/* sidebar */
+.cs-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.cs-topics-block h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--cs-navy);
+  margin-bottom: 10px;
+}
+
+.cs-pill-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.cs-pill {
+  border-radius: 999px;
+  padding: 6px 14px;
+  border: 1px solid #ddd;
+  background: #fff;
+  font-size: 0.82rem;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.cs-pill:hover {
+  border-color: var(--cs-navy);
+  color: var(--cs-navy);
+}
+
+/* scroll animation */
+.cs-reveal {
+  opacity: 0;
+  transform: translateY(35px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.cs-reveal.cs-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* responsive */
+@media (max-width: 900px) {
+  .cs-courses-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .cs-row-link {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cs-course-thumb {
+    margin-right: 0;
+    margin-bottom: 8px;
+  }
+}
+/* ===============================
+   END 			END  	END
+================================= */
+
+    
+    /* =========================================
+   NEWSLETTER SECTION
+========================================= */
+.qei-newsletter {
+  position: relative;
+  overflow: clip;
+  padding: 56px 16px 64px;
+  color: #eaf0ff;
+  isolation: isolate;
+}
+
+/* Gradient background */
+.qei-newsletter-bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(
+      1100px 600px at 85% 70%,
+      rgba(255, 255, 255, 0.08) 0%,
+      rgba(255, 255, 255, 0) 60%
+    ),
+    radial-gradient(
+      900px 500px at 15% 30%,
+      rgba(255, 255, 255, 0.07) 0%,
+      rgba(255, 255, 255, 0) 60%
+    ),
+    linear-gradient(180deg, #4b465a 0%, #0a1d78 60%, #061e64 100%);
+  box-shadow: inset 0 40px 60px rgba(0, 0, 0, 0.25);
+}
+
+.qei-newsletter-wrap {
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.qei-newsletter-heading {
+  font-size: clamp(1.8rem, 2.4vw, 2.1rem);
+  font-weight: 700;
+  margin: 0 0 1.5rem;
+}
+
+.qei-newsletter-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.qei-newsletter-form input {
+  min-width: 240px;
+  max-width: 320px;
+  padding: 0.6rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid #9ca3af;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.qei-newsletter-form button {
+  padding: 0.6rem 1.4rem;
+  border-radius: 999px;
+  border: none;
+  background-color: var(--gold);
+  color: #111827;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.qei-newsletter-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  justify-content: center;
+  font-size: 0.86rem;
+  color: #9ca3af;
+  margin-bottom: 0.5rem;
+}
+
+.qei-newsletter-links a {
+  color: #e5e7eb;
+  text-decoration: none;
+}
+
+.qei-newsletter-copy {
+  font-size: 0.8rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* Utility */
+.qei-newsletter-sep {
+  color: #4b5563;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+/* Extra Footer Content – cleaner layout */
+/* ================= EXTRA FOOTER LAYOUT ================= */
+/* =================== SINGLE-LINE FOOTER ROW ====================== */
+.qei-footer-extras {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: nowrap;        /* 🔥 prevents wrapping */
+  white-space: nowrap;      /* 🔥 keeps text inline */
+  max-width: 100%;
+  color: #e5e7eb;
+  font-size: 0.9rem;
+}
+
+/* Horizontal contact items */
+.qei-footer-contact {
+  display: flex;
+  gap: 1.5rem;   /* reduced spacing so icons fit */
+}
+
+.qei-footer-contact span {
+  white-space: nowrap;
+}
+
+/* Social icons inline right */
+.qei-footer-social-icons {
+  display: flex;
+  gap: 6px;      /* 🔥 tighter spacing */
+}
+
+.qei-footer-social-icons a {
+  background: rgba(255,255,255,0.15);
+  padding: 8px;
+  border-radius: 50%;
+  backdrop-filter: blur(3px);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.25s;
+}
+
+.qei-footer-social-icons i {
+  font-size: 0.95rem;
+  color: #eaf0ff;
+  transition: 0.25s;
+}
+
+.qei-footer-social-icons a:hover {
+  background: var(--gold);
+}
+.qei-footer-social-icons a:hover i {
+  color: #111827;
+}
+
+/* nice copyright spacing */
+.qei-newsletter-copy {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+/* Desktop spacing to spread them evenly */
+@media (min-width: 900px) {
+  .qei-footer-extras {
+    justify-content: space-between;
+    padding-inline: 2rem;
+  }
+}
+/* =========================================================================================
+  END 		END 		END  NEWSLETTER SECTION		END END 
+=============================================================================================== */
+
+
+/* =========================================
+   R-TECH CHATBOT
+========================================= */
+.rtech-chatbot {
+  position: fixed;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  z-index: 999;
+}
+
+.chatbot-toggle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--gold);
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.chatbot-toggle img {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+}
+
+.chatbot-box {
+  position: absolute;
+  bottom: 74px;
+  right: 0;
+  width: 320px;
+  max-height: 420px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.35);
+  display: none;
+  overflow: hidden;
+}
+
+.chatbot-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  background-color: var(--navy);
+  color: #ffffff;
+}
+
+.bot-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.bot-info img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.chatbot-header button {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.chatbot-content {
+  padding: 0.75rem 1rem;
+  max-height: 260px;
+  overflow-y: auto;
+  background-color: #f9fafb;
+}
+
+.bot-msg,
+.user-msg {
+  font-size: 0.87rem;
+  margin-bottom: 0.5rem;
+  padding: 0.55rem 0.75rem;
+  border-radius: 12px;
+  max-width: 90%;
+}
+
+.bot-msg {
+  background-color: #e5e7eb;
+  color: #111827;
+  align-self: flex-start;
+}
+
+.user-msg {
+  background-color: var(--gold);
+  color: #111827;
+  margin-left: auto;
+  text-align: right;
+}
+
+.chatbot-input {
+  display: flex;
+  gap: 0.4rem;
+  padding: 0.6rem 0.75rem 0.75rem;
+  background-color: #ffffff;
+}
+
+.chatbot-input input {
+  flex: 1;
+  border-radius: 999px;
+  border: 1px solid #d1d5db;
+  padding: 0.5rem 0.8rem;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.chatbot-input button {
+  border-radius: 999px;
+  border: none;
+  background-color: var(--navy);
+  color: #ffffff;
+  padding: 0 0.9rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+/* =======================================================================
+  END		END		END 	R-TECH CHATBOT		END 	END
+====================================================================================== */
+    

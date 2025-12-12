@@ -1,0 +1,337 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Company Name | Tagline Here</title>
+
+    <meta name="description" content="Describe your website here.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ======== Favicon ======== -->
+    <link rel="icon" href="images/favicon.svg" type="image/png">
+    <!-- ICON LIBRARY -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+    <!-- ======== Main Stylesheet ======== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style6.css">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer">
+</head>
+
+<body>
+  <!-- =================================
+       HEADER (loaded dynamically)
+  ================================== -->
+  <div id="header"></div>
+    
+    <!-- ================= VIDEO HERO: EDUCATIONAL PLATFORM ================= -->
+<section class="edu-hero" id="education-platform">
+  <video class="edu-video-bg" autoplay muted loop playsinline>
+    <source src="images/backgroundvideo4.mp4" type="video/mp4">
+  </video>
+
+  <div class="edu-overlay"></div>
+
+  <div class="edu-hero-inner container">
+    <div class="edu-hero-text">
+      <h1 class="edu-hero-title">Educational Learning Platform</h1>
+      <p class="edu-hero-subtext">
+        Empowering learners with tools, resources, and experiences that inspire
+        growth and excellence in both high school and university.
+      </p>
+
+      <div class="edu-hero-actions">
+        <a href="#join" class="edu-btn edu-btn-primary">Join for free</a>
+        <a href="#dashboards" class="edu-btn edu-btn-outline">Explore courses</a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- =============================================================== -->
+    
+    
+    
+    
+    
+    <!-- ====================== EDUCATION DASHBOARDS ====================== -->
+<!-- ====================== EDUCATION DASHBOARDS ====================== -->
+<section id="dashboards" class="edu-platform-dashboards">
+  <div class="container">
+
+    <!-- TOP LEVEL: HIGH SCHOOL / UNIVERSITY -->
+    <div class="edu-level-toggle">
+      <button class="edu-level-btn active" data-target="highschool">High School</button>
+      <button class="edu-level-btn" data-target="university">University</button>
+    </div>
+
+    <!-- ================= HIGH SCHOOL DASHBOARD ================= -->
+    <div class="edu-dashboard active" id="dashboard-highschool">
+
+      <!-- FILTER PILLS FOR HIGH SCHOOL -->
+      <div class="edu-filter-bar">
+        <span class="edu-filter-label">Track:</span>
+        <button class="edu-filter-btn active"
+                data-level="highschool"
+                data-filter="all">
+          All
+        </button>
+        <button class="edu-filter-btn"
+                data-level="highschool"
+                data-filter="science">
+          Science
+        </button>
+        <button class="edu-filter-btn"
+                data-level="highschool"
+                data-filter="commercial">
+          Commercial
+        </button>
+        <button class="edu-filter-btn"
+                data-level="highschool"
+                data-filter="arts">
+          Arts
+        </button>
+      </div>
+
+      <div class="edu-card-grid">
+
+        <!-- Science cards -->
+        <article class="edu-card"
+                 data-level="highschool"
+                 data-category="science">
+          <p class="edu-card-tag">Science</p>
+          <h3 class="edu-card-title">WAEC / NECO Science Prep</h3>
+          <p class="edu-card-text">
+            Practice materials for Physics, Chemistry, Biology and Mathematics
+            with past questions, timed tests and instant feedback.
+          </p>
+        </article>
+
+        <article class="edu-card"
+                 data-level="highschool"
+                 data-category="science">
+          <p class="edu-card-tag">Science</p>
+          <h3 class="edu-card-title">STEM Project Library</h3>
+          <p class="edu-card-text">
+            Project ideas, lab simulations and experiment templates that help
+            science students build strong portfolios.
+          </p>
+        </article>
+
+        <!-- Commercial cards -->
+        <article class="edu-card"
+                 data-level="highschool"
+                 data-category="commercial">
+          <p class="edu-card-tag">Commercial</p>
+          <h3 class="edu-card-title">Business & Accounting Prep</h3>
+          <p class="edu-card-text">
+            Notes and practice for Financial Accounting, Commerce, Economics and
+            Business Studies tailored to exam formats.
+          </p>
+        </article>
+
+        <article class="edu-card"
+                 data-level="highschool"
+                 data-category="commercial">
+          <p class="edu-card-tag">Commercial</p>
+          <h3 class="edu-card-title">Entrepreneurship Projects</h3>
+          <p class="edu-card-text">
+            Simple business project ideas, market research guides and pitch
+            templates for commercial students.
+          </p>
+        </article>
+
+        <!-- Arts cards -->
+        <article class="edu-card"
+                 data-level="highschool"
+                 data-category="arts">
+          <p class="edu-card-tag">Arts</p>
+          <h3 class="edu-card-title">Arts & Humanities Hub</h3>
+          <p class="edu-card-text">
+            Resources for Literature, Government, CRS/IRS and History with
+            summaries, guides and essay practice.
+          </p>
+        </article>
+
+        <article class="edu-card"
+                 data-level="highschool"
+                 data-category="arts">
+          <p class="edu-card-tag">Arts</p>
+          <h3 class="edu-card-title">Creative Skills & Communication</h3>
+          <p class="edu-card-text">
+            Writing exercises, debate outlines, public speaking prompts and
+            creative project ideas for arts students.
+          </p>
+        </article>
+
+      </div>
+    </div>
+
+    <!-- ================= UNIVERSITY DASHBOARD ================= -->
+    <div class="edu-dashboard" id="dashboard-university">
+
+      <!-- FILTER PILLS FOR UNIVERSITY -->
+      <div class="edu-filter-bar">
+        <span class="edu-filter-label">Pathway:</span>
+        <button class="edu-filter-btn active"
+                data-level="university"
+                data-filter="all">
+          All
+        </button>
+        <button class="edu-filter-btn"
+                data-level="university"
+                data-filter="science-tech">
+          Science & Tech
+        </button>
+        <button class="edu-filter-btn"
+                data-level="university"
+                data-filter="business">
+          Business & Management
+        </button>
+        <button class="edu-filter-btn"
+                data-level="university"
+                data-filter="humanities">
+          Humanities & Social Sciences
+        </button>
+      </div>
+
+      <div class="edu-card-grid">
+
+        <!-- Science & Tech -->
+        <article class="edu-card"
+                 data-level="university"
+                 data-category="science-tech">
+          <p class="edu-card-tag">Science & Tech</p>
+          <h3 class="edu-card-title">Faculty Course Hubs</h3>
+          <p class="edu-card-text">
+            Central spaces for Engineering and Science departments with lecture
+            slides, lab manuals and recorded sessions.
+          </p>
+        </article>
+
+        <article class="edu-card"
+                 data-level="university"
+                 data-category="science-tech">
+          <p class="edu-card-tag">Science & Tech</p>
+          <h3 class="edu-card-title">Research & Final Year Projects</h3>
+          <p class="edu-card-text">
+            Guides and templates for proposals, data analysis and reporting in
+            technical and science-based research.
+          </p>
+        </article>
+
+        <!-- Business & Management -->
+        <article class="edu-card"
+                 data-level="university"
+                 data-category="business">
+          <p class="edu-card-tag">Business & Management</p>
+          <h3 class="edu-card-title">Management & Commerce Hub</h3>
+          <p class="edu-card-text">
+            Resources for Accounting, Economics, Business Administration and
+            related courses in one structured space.
+          </p>
+        </article>
+
+        <article class="edu-card"
+                 data-level="university"
+                 data-category="business">
+          <p class="edu-card-tag">Business & Management</p>
+          <h3 class="edu-card-title">Industry Skills & Career Prep</h3>
+          <p class="edu-card-text">
+            Mini-courses in Excel, data analysis, product thinking and career
+            planning for business students.
+          </p>
+        </article>
+
+        <!-- Humanities & Social Sciences -->
+        <article class="edu-card"
+                 data-level="university"
+                 data-category="humanities">
+          <p class="edu-card-tag">Humanities & Social Sciences</p>
+          <h3 class="edu-card-title">Humanities Resource Bank</h3>
+          <p class="edu-card-text">
+            Article collections, reading lists and essay structures for Law,
+            Education and Social Sciences.
+          </p>
+        </article>
+
+        <article class="edu-card"
+                 data-level="university"
+                 data-category="humanities">
+          <p class="edu-card-tag">Humanities & Social Sciences</p>
+          <h3 class="edu-card-title">Study Groups & Discussions</h3>
+          <p class="edu-card-text">
+            Virtual discussion rooms where students can review cases, debate
+            issues and prepare presentations.
+          </p>
+        </article>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- ==================== END EDUCATION DASHBOARDS ==================== -->
+<!-- ==================== END EDUCATION DASHBOARDS ==================== -->
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+   <script>
+  // SWITCH BETWEEN HIGH SCHOOL / UNIVERSITY
+  document.querySelectorAll('.edu-level-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      // buttons
+      document.querySelectorAll('.edu-level-btn').forEach(function (b) {
+        b.classList.remove('active');
+      });
+      this.classList.add('active');
+
+      // dashboards
+      document.querySelectorAll('.edu-dashboard').forEach(function (dash) {
+        dash.classList.remove('active');
+      });
+
+      var target = this.getAttribute('data-target');
+      var dash = document.getElementById('dashboard-' + target);
+      if (dash) dash.classList.add('active');
+    });
+  });
+
+  // FILTER CARDS INSIDE EACH DASHBOARD
+  document.querySelectorAll('.edu-filter-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var level = this.getAttribute('data-level');   // highschool / university
+      var filter = this.getAttribute('data-filter'); // science / commercial / etc.
+
+      // toggle active state for filters of same level
+      document.querySelectorAll('.edu-filter-btn[data-level="' + level + '"]').forEach(function (b) {
+        b.classList.remove('active');
+      });
+      this.classList.add('active');
+
+      // show / hide cards for that level
+      document.querySelectorAll('.edu-card[data-level="' + level + '"]').forEach(function (card) {
+        var category = card.getAttribute('data-category');
+        if (filter === 'all' || category === filter) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    });
+  });
+</script>
+    
+       </body>
+</html>

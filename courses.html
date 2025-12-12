@@ -1,0 +1,675 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Company Name | Tagline Here</title>
+
+    <meta name="description" content="Describe your website here.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ======== Favicon ======== -->
+    <link rel="icon" href="images/favicon.svg" type="image/png">
+    <!-- ICON LIBRARY -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+    <!-- ======== Main Stylesheet ======== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style7.css">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer">
+</head>
+
+<body>
+  <!-- =================================
+       HEADER (loaded dynamically)
+  ================================== -->
+  <div id="header"></div>
+    
+    <!-- COURSES HERO SECTION -->
+<section class="rtc-hero">
+    <div class="rtc-hero__bg"></div>
+    <div class="rtc-hero__overlay"></div>
+
+    <div class="rtc-hero__content reveal">
+      <p class="rtc-hero__eyebrow">Training & Programmes</p>
+      <h1 class="rtc-hero__title">Our Courses</h1>
+      <p class="rtc-hero__subtitle">
+        Learn in-demand tech skills from Web Development to Cyber Security,
+        Data Analysis, AI, and more. Study at your pace and earn industry-ready certificates.
+      </p>
+
+      <form class="rtc-hero__search" action="#" method="get">
+        <input type="text" name="q" placeholder="Search courses (e.g. Python, Web, AI) …">
+        <button type="submit">
+          <i class="fa fa-search"></i>
+          Search
+        </button>
+      </form>
+    </div>
+  </section>
+
+    
+    
+    <!-- ==================================
+       FEATURE PROGRAMS  MAIN LAYOUT: SIDEBAR + GRID
+  =================================== -->
+ <section class="rtc-page">
+    <div class="rtc-page__inner">
+
+      <!-- SIDEBAR -->
+      <aside class="rtc-sidebar">
+        <div class="rtc-sidebar__search">
+          <label for="course-search">Search Courses</label>
+          <input id="course-search" type="text" placeholder="Search..." />
+        </div>
+
+        <p class="rtc-sidebar__title">Course Categories</p>
+        <ul class="rtc-sidebar__list">
+          <li data-href="courses.html?category=all" tabindex="0">
+            <span>All Courses</span><span>28</span>
+          </li>
+          <li data-href="courses.html?category=coding" tabindex="0">
+            <span>Coding</span><span>8</span>
+          </li>
+          <li data-href="courses.html?category=it" tabindex="0">
+            <span>Information Technology</span><span>5</span>
+          </li>
+          <li data-href="courses.html?category=intelligence" tabindex="0">
+            <span>Intelligence</span><span>5</span>
+          </li>
+          <li data-href="courses.html?category=management" tabindex="0">
+            <span>Management</span><span>3</span>
+          </li>
+          <li data-href="courses.html?category=marketing" tabindex="0">
+            <span>Marketing</span><span>3</span>
+          </li>
+          <li data-href="courses.html?category=programming" tabindex="0">
+            <span>Programming &amp; Coding</span><span>9</span>
+          </li>
+          <li data-href="courses.html?category=cyber" tabindex="0">
+            <span>Cyber Security</span><span>5</span>
+          </li>
+          <li data-href="courses.html?category=software" tabindex="0">
+            <span>Software</span><span>6</span>
+          </li>
+        </ul>
+
+        <p class="rtc-sidebar__label">Recent Courses</p>
+        <ul class="rtc-sidebar__recent-list">
+          <li class="rtc-sidebar__recent-item" data-href="course-ai.html" tabindex="0">
+            <div class="rtc-sidebar__thumb">
+              <!-- optional thumbnail -->
+              <span>AI</span>
+            </div>
+            <div class="rtc-sidebar__recent-text">
+              Artificial Intelligence
+              <span class="rtc-sidebar__recent-meta">₦300,000 · 4 Enrolled</span>
+            </div>
+          </li>
+          <li class="rtc-sidebar__recent-item" data-href="course-cyber.html" tabindex="0">
+            <div class="rtc-sidebar__thumb"><span>CS</span></div>
+            <div class="rtc-sidebar__recent-text">
+              Cyber Security
+              <span class="rtc-sidebar__recent-meta">₦140,000 · 6 Enrolled</span>
+            </div>
+          </li>
+          <li class="rtc-sidebar__recent-item" data-href="course-flutter.html" tabindex="0">
+            <div class="rtc-sidebar__thumb"><span>FL</span></div>
+            <div class="rtc-sidebar__recent-text">
+              Introduction to Flutter
+              <span class="rtc-sidebar__recent-meta">₦80,000 · 2 Enrolled</span>
+            </div>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- MAIN AREA -->
+      <main>
+        <header class="rtc-main-header reveal">
+          <div>
+            <h2 class="rtc-main-header__title">Featured Programs</h2>
+            <p class="rtc-main-header__meta">
+              Explore certificate and master programs across coding, IT, management and more.
+            </p>
+          </div>
+
+          <div class="rtc-main-header__filters">
+            <span>Sort by:</span>
+            <select class="rtc-main-header__select">
+              <option>Popular</option>
+              <option>Newest</option>
+              <option>Price: Low to High</option>
+              <option>Price: High to Low</option>
+            </select>
+          </div>
+        </header>
+
+        <!-- COURSE GRID -->
+        <div class="rtc-grid">
+
+          <!-- Card 1 -->
+          <article class="rtc-card reveal"
+                   data-href="course-fullstack-web.html" tabindex="0">
+            <span class="rtc-card__badge">Best Seller</span>
+            <div class="rtc-card__media">
+              <div class="rtc-card__ribbon">Certificate Program</div>
+              <div class="rtc-card__media-circle">
+                <img src="images/fullstack.webp" alt="Full stack web" />
+              </div>
+            </div>
+            <div class="rtc-card__body">
+              <div class="rtc-card__label">Coding</div>
+              <h3 class="rtc-card__title">Learn (Full Stack) Web Development</h3>
+              <div class="rtc-card__category">Web Development</div>
+            </div>
+            <div class="rtc-card__meta">
+              <div class="rtc-card__meta-left">
+                <span><i class="fa-regular fa-user"></i> 294 Enrolled</span>
+              </div>
+              <div class="rtc-stars">
+                ★★★★★
+              </div>
+            </div>
+            <div class="rtc-card__price">
+              <span class="rtc-card__price-old">₦120,000</span>
+              <span class="rtc-card__price-new">₦150,000</span>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="rtc-card reveal"
+                   data-href="course-accounting-principles.html" tabindex="0">
+            <div class="rtc-card__media">
+              <div class="rtc-card__ribbon">Certificate Program</div>
+              <div class="rtc-card__media-circle">
+                <img src="images/course-accounting.jpg" alt="Accounting" />
+              </div>
+            </div>
+            <div class="rtc-card__body">
+              <div class="rtc-card__label">Management</div>
+              <h3 class="rtc-card__title">Learn Principles of Accounting</h3>
+              <div class="rtc-card__category">Accounting</div>
+            </div>
+            <div class="rtc-card__meta">
+              <div class="rtc-card__meta-left">
+                <span><i class="fa-regular fa-user"></i> 5 Enrolled</span>
+              </div>
+              <div class="rtc-stars">★★★★☆</div>
+            </div>
+            <div class="rtc-card__price">
+              <span class="rtc-card__price-old">₦20,000</span>
+              <span class="rtc-card__price-free">Free</span>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="rtc-card reveal"
+                   data-href="course-seo.html" tabindex="0">
+            <span class="rtc-card__badge">Master's</span>
+            <div class="rtc-card__media">
+              <div class="rtc-card__ribbon">Master's Program</div>
+              <div class="rtc-card__media-circle">
+                <img src="images/seo.webp" alt="SEO" />
+              </div>
+            </div>
+            <div class="rtc-card__body">
+              <div class="rtc-card__label">Marketing</div>
+              <h3 class="rtc-card__title">Search Engine Optimization (SEO)</h3>
+              <div class="rtc-card__category">Marketing</div>
+            </div>
+            <div class="rtc-card__meta">
+              <div class="rtc-card__meta-left">
+                <span><i class="fa-regular fa-user"></i> 39 Enrolled</span>
+              </div>
+              <div class="rtc-stars">★★★★☆</div>
+            </div>
+            <div class="rtc-card__price">
+              <span class="rtc-card__price-old">₦60,000</span>
+              <span class="rtc-card__price-new">₦100,000</span>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="rtc-card reveal"
+                   data-href="course-fundamentals-accounting.html" tabindex="0">
+            <div class="rtc-card__media">
+              <div class="rtc-card__ribbon">Certificate Program</div>
+              <div class="rtc-card__media-circle">
+                <img src="images/course-fundamentals-accounting.jpg" alt="Accounting" />
+              </div>
+            </div>
+            <div class="rtc-card__body">
+              <div class="rtc-card__label">Management</div>
+              <h3 class="rtc-card__title">Fundamentals of Accounting</h3>
+              <div class="rtc-card__category">Management</div>
+            </div>
+            <div class="rtc-card__meta">
+              <div class="rtc-card__meta-left">
+                <span><i class="fa-regular fa-user"></i> 2 Enrolled</span>
+              </div>
+              <div class="rtc-stars">★★★★☆</div>
+            </div>
+            <div class="rtc-card__price">
+              <span class="rtc-card__price-old">₦50,000</span>
+              <span class="rtc-card__price-new">₦10,000</span>
+            </div>
+          </article>
+
+          <!-- Card 5 -->
+          <article class="rtc-card reveal"
+                   data-href="course-content-writing.html" tabindex="0">
+            <div class="rtc-card__media">
+              <div class="rtc-card__ribbon">Certificate Program</div>
+              <div class="rtc-card__media-circle">
+                <img src="images/content writting.jpeg" alt="Content writing" />
+              </div>
+            </div>
+            <div class="rtc-card__body">
+              <div class="rtc-card__label">Marketing</div>
+              <h3 class="rtc-card__title">
+                Learn Advance Content Writing
+              </h3>
+              <div class="rtc-card__category">Content Marketing</div>
+            </div>
+            <div class="rtc-card__meta">
+              <div class="rtc-card__meta-left">
+                <span><i class="fa-regular fa-user"></i> 20 Enrolled</span>
+              </div>
+              <div class="rtc-stars">★★★★☆</div>
+            </div>
+            <div class="rtc-card__price">
+              <span class="rtc-card__price-old">₦50,000</span>
+              <span class="rtc-card__price-new">₦30,000</span>
+            </div>
+          </article>
+
+          <!-- Card 6 -->
+          <article class="rtc-card reveal"
+                   data-href="course-intermediate-ml.html" tabindex="0">
+            <span class="rtc-card__badge">Best Seller</span>
+            <div class="rtc-card__media">
+              <div class="rtc-card__ribbon">Master's Program</div>
+              <div class="rtc-card__media-circle">
+                <img src="images/Machine learning.jpeg
+                        " />
+              </div>
+            </div>
+            <div class="rtc-card__body">
+              <div class="rtc-card__label">Programming</div>
+              <h3 class="rtc-card__title">
+                Intermediate – Machine Learning
+              </h3>
+              <div class="rtc-card__category">Programming</div>
+            </div>
+            <div class="rtc-card__meta">
+              <div class="rtc-card__meta-left">
+                <span><i class="fa-regular fa-user"></i> 94 Enrolled</span>
+              </div>
+              <div class="rtc-stars">★★★★☆</div>
+            </div>
+            <div class="rtc-card__price">
+              <span class="rtc-card__price-old">₦60,000</span>
+              <span class="rtc-card__price-new">₦49,000</span>
+            </div>
+          </article>
+
+          <!-- Card 7 -->
+          <article class="rtc-card reveal"
+                   data-href="course-python-kids.html" tabindex="0">
+            <span class="rtc-card__badge">Best Seller</span>
+            <div class="rtc-card__media">
+              <div class="rtc-card__ribbon">Certificate Program</div>
+              <div class="rtc-card__media-circle">
+                <img src="images/python.jpeg" alt="Python kids" />
+              </div>
+            </div>
+            <div class="rtc-card__body">
+              <div class="rtc-card__label">Programming</div>
+              <h3 class="rtc-card__title">
+                Beginner – Python Programming for Kids
+              </h3>
+              <div class="rtc-card__category">Programming</div>
+            </div>
+            <div class="rtc-card__meta">
+              <div class="rtc-card__meta-left">
+                <span><i class="fa-regular fa-user"></i> 29 Enrolled</span>
+              </div>
+              <div class="rtc-stars">★★★★★</div>
+            </div>
+            <div class="rtc-card__price">
+              <span class="rtc-card__price-old">₦50,000</span>
+              <span class="rtc-card__price-new">₦20,000</span>
+            </div>
+          </article>
+
+          <!-- Card 8 -->
+          <article class="rtc-card reveal"
+                   data-href="course-mobile-app.html" tabindex="0">
+            <span class="rtc-card__badge">Master's</span>
+            <div class="rtc-card__media">
+              <div class="rtc-card__ribbon">Master's Program</div>
+              <div class="rtc-card__media-circle">
+                <img src="images/mobile.jpeg" alt="Mobile app" />
+              </div>
+            </div>
+            <div class="rtc-card__body">
+              <div class="rtc-card__label">Programming</div>
+              <h3 class="rtc-card__title">
+                Advance – Mobile App Development
+              </h3>
+              <div class="rtc-card__category">Programming</div>
+            </div>
+            <div class="rtc-card__meta">
+              <div class="rtc-card__meta-left">
+                <span><i class="fa-regular fa-user"></i> 13 Enrolled</span>
+              </div>
+              <div class="rtc-stars">★★★★☆</div>
+            </div>
+            <div class="rtc-card__price">
+              <span class="rtc-card__price-old">₦250,000</span>
+              <span class="rtc-card__price-new">₦220,000</span>
+            </div>
+          </article>
+
+          <!-- Card 9 -->
+          <article class="rtc-card reveal"
+                   data-href="course-database.html" tabindex="0">
+            <div class="rtc-card__media">
+              <div class="rtc-card__ribbon">Certificate Program</div>
+              <div class="rtc-card__media-circle">
+                <img src="images/sql.png" alt="Database" />
+              </div>
+            </div>
+            <div class="rtc-card__body">
+              <div class="rtc-card__label">Management</div>
+              <h3 class="rtc-card__title">
+                Beginner – Database Management
+              </h3>
+              <div class="rtc-card__category">Database</div>
+            </div>
+            <div class="rtc-card__meta">
+              <div class="rtc-card__meta-left">
+                <span><i class="fa-regular fa-user"></i> 62 Enrolled</span>
+              </div>
+              <div class="rtc-stars">★★★★☆</div>
+            </div>
+            <div class="rtc-card__price">
+              <span class="rtc-card__price-old">₦118,800</span>
+              <span class="rtc-card__price-new">₦80,000</span>
+            </div>
+          </article>
+        </div>
+
+        <!-- Pagination (static) -->
+        <div class="rtc-pagination">
+          <button>&larr; Prev</button>
+          <button class="rtc-pagination--active">1</button>
+          <button>2</button>
+          <button>3</button>
+          <button>Next &rarr;</button>
+        </div>
+      </main>
+    </div>
+  </section>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <!-- =================================
+       R-TECH CHATBOT WIDGET
+  ================================== -->
+  <div class="rtech-chatbot scroll-animate">
+    <div class="chatbot-toggle" id="chatbotToggle">
+      <img src="logo/chatbot.png" alt="R-TECH Bot">
+    </div>
+
+    <div class="chatbot-box" id="chatbotBox">
+      <div class="chatbot-header">
+        <div class="bot-info">
+          <img src="images/rtech-bot.png" alt="R-TECH Bot Avatar">
+          <span>R-TECH Assistant</span>
+        </div>
+        <button id="closeChatbot" aria-label="Close chatbot">&times;</button>
+      </div>
+
+      <div class="chatbot-content" id="chatbotMessages">
+        <div class="bot-msg">
+          👋 Hello! I’m R-TECH. How can I help you today?
+        </div>
+      </div>
+
+      <div class="chatbot-input">
+        <input type="text" id="userInput" placeholder="Type a message..." />
+        <button id="sendBtn" aria-label="Send message">➤</button>
+      </div>
+    </div>
+  </div>
+    
+<!-- ===================================================================================================================================
+        NEWSLETTER / FOOTER				NEWSLETTER / FOOTER					NEWSLETTER / FOOTER		NEWSLETTER / FOOTER
+====================================================================================================================================== -->
+<section class="qei-newsletter" aria-labelledby="qei-newsletter-title">
+  <div class="qei-newsletter-bg"></div>
+
+  <div class="qei-newsletter-wrap">
+
+    <!-- Newsletter Title -->
+    <h2 id="qei-newsletter-title" class="qei-newsletter-heading">
+      Subscribe to get our Newsletter
+    </h2>
+
+    <!-- Newsletter Form -->
+    <form class="qei-newsletter-form" action="#" method="post" novalidate>
+      <label for="qei-newsletter-email" class="sr-only">Your Email</label>
+      <input
+        id="qei-newsletter-email"
+        name="email"
+        type="email"
+        placeholder="Your Email"
+        required
+      />
+      <button type="submit">Subscribe</button>
+    </form>
+
+    <!-- footer links -->
+    <nav class="qei-newsletter-links" aria-label="Footer">
+      <a href="#">Careers</a>
+      <span class="qei-newsletter-sep">|</span>
+      <a href="#">Privacy Policy</a>
+      <span class="qei-newsletter-sep">|</span>
+      <a href="#">Terms &amp; Conditions</a>
+    </nav>
+
+    <!-- ================= MAIN FOOTER ROW (like web.dev) ================= -->
+   <div class="qei-footer-extras">
+
+  <div class="qei-footer-contact">
+    <span><strong>Phone:</strong> +234 80 0000 0000</span>
+    <span><strong>Email:</strong> info@rtechdigital.com</span>
+    <span><strong>Address:</strong> Abuja, Nigeria.</span>
+  </div>
+
+  <div class="qei-footer-social-icons">
+    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+  </div>
+
+</div>
+    <!-- Copyright -->
+    <p class="qei-newsletter-copy">© 2025 Rtech Technology. All Rights Reserved.</p>
+  </div>
+</section>
+ <!-- ===================================================================================================================================
+       END END  NEWSLETTER / FOOTER			END END 	NEWSLETTER / FOOTER					END END END 	NEWSLETTER / FOOTER
+  ====================================================================================================================================== -->
+    
+     <!-- LOAD HEADER AND ENABLE MOBILE MENU -->
+          <script>
+            fetch("header.html")
+              .then((response) => response.text())
+              .then((data) => {
+                document.getElementById("header").innerHTML = data;
+
+                const menuToggle = document.getElementById("mobile-menu");
+                const nav = document.querySelector("nav");
+
+                if (menuToggle && nav) {
+                  menuToggle.addEventListener("click", () => {
+                    menuToggle.classList.toggle("active");
+                    nav.classList.toggle("active");
+                  });
+                }
+              })
+              .catch((error) => console.error("Error loading header:", error));
+          </script>
+    
+    
+    <!-- Chatbot behaviour -->
+  <script>
+    const toggleBtn = document.getElementById("chatbotToggle");
+    const chatBox = document.getElementById("chatbotBox");
+    const closeBtn = document.getElementById("closeChatbot");
+    const sendBtn = document.getElementById("sendBtn");
+    const userInput = document.getElementById("userInput");
+    const chatMessages = document.getElementById("chatbotMessages");
+
+    if (toggleBtn && chatBox) {
+      toggleBtn.addEventListener("click", () => {
+        chatBox.style.display = chatBox.style.display === "block" ? "none" : "block";
+      });
+    }
+
+    if (closeBtn && chatBox) {
+      closeBtn.addEventListener("click", () => {
+        chatBox.style.display = "none";
+      });
+    }
+
+    if (sendBtn && userInput) {
+      sendBtn.addEventListener("click", sendMessage);
+      userInput.addEventListener("keypress", (e) => {
+        if (e.key === "Enter") {
+          e.preventDefault();
+          sendMessage();
+        }
+      });
+    }
+
+    function sendMessage() {
+      const userMsg = userInput.value.trim();
+      if (!userMsg) return;
+
+      const userDiv = document.createElement("div");
+      userDiv.classList.add("user-msg");
+      userDiv.textContent = userMsg;
+      chatMessages.appendChild(userDiv);
+
+      userInput.value = "";
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+
+      setTimeout(() => {
+        const botDiv = document.createElement("div");
+        botDiv.classList.add("bot-msg");
+
+        const msg = userMsg.toLowerCase();
+        if (msg.includes("service")) {
+          botDiv.textContent = "We offer tech solutions, digital products, and training programmes.";
+        } else if (msg.includes("training")) {
+          botDiv.textContent = "You can register for our tech training via the Training section.";
+        } else if (msg.includes("support")) {
+          botDiv.textContent = "You can contact support through our contact page or email.";
+        } else {
+          botDiv.textContent = "Thanks for your message! A member of our team will follow up shortly.";
+        }
+
+        chatMessages.appendChild(botDiv);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+      }, 700);
+    }
+  </script>
+    
+    
+   <!-- ===========================================
+       JS: scroll animation + clickable items
+  =============================================== -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      /* 1) IntersectionObserver for reveal + cards */
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("in-view");
+            } else {
+              entry.target.classList.remove("in-view");
+            }
+          });
+        },
+        {
+          threshold: 0.2,
+        }
+      );
+
+      document.querySelectorAll(".reveal, .rtc-card").forEach((el) => {
+        observer.observe(el);
+      });
+
+      /* 2) Slow stagger for cards (zoom in one by one) */
+      const cards = document.querySelectorAll(".rtc-card");
+      cards.forEach((card, index) => {
+        card.style.transitionDelay = index * 0.2 + "s"; // 0.2s apart
+      });
+
+      /* 3) Make anything with data-href clickable (cards + categories + recent) */
+      function handleActivate(el) {
+        const url = el.getAttribute("data-href");
+        if (!url) return;
+
+        if (url.startsWith("#")) {
+          const target = document.querySelector(url);
+          if (target) {
+            target.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+        } else {
+          window.location.href = url;
+        }
+      }
+
+      const clickableEls = document.querySelectorAll("[data-href]");
+      clickableEls.forEach((el) => {
+        el.addEventListener("click", () => handleActivate(el));
+
+        // keyboard support (Enter / Space)
+        el.addEventListener("keydown", (e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            handleActivate(el);
+          }
+        });
+      });
+    });
+  </script>
+    
+     </body>
+</html>

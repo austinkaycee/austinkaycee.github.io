@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>R-TECH | Research &amp; Business Analytics</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/webp" href="images/favicon.svg" />
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer">
+
+  <!-- Main site styles (header, nav, etc.) -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Same page CSS file you’re already using -->
+  <link rel="stylesheet" href="style1.css">
+</head>
+
+<body>
+  <!-- =================================
+       HEADER (loaded dynamically)
+  ================================== -->
+  <div id="header"></div>
+
+  <!-- =================================
+       PAGE HERO – RESEARCH & BUSINESS ANALYTICS
+  ================================== -->
+  <section class="page-hero">
+    <div class="container hero-wrapper scroll-animate">
+      <div class="hero-text">
+        <h1 class="page-title">
+          Research &amp; <span style="color:#C9A20B;">Business Analytics</span>
+        </h1>
+        <p class="page-subtitle">
+          Empowering organizations, students, and professionals with
+          data-driven insights and research expertise that support
+          smarter decisions and sustainable growth.
+        </p>
+      </div>
+
+      <div class="hero-image">
+        <img src="images/businesspeople.webp"
+             alt="Research and business analytics meeting">
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================
+       RESEARCH SERVICES (TOP CARDS)
+  ================================== -->
+  <section class="tech-solutions-section alt-bg">
+    <div class="container">
+      <div class="section-header scroll-animate">
+        <h2 class="section-title">Research Services</h2>
+        <p class="section-intro">
+          We support academic, technical, and industry-based projects from idea
+          to completion — helping you design robust studies, collect reliable
+          data, and present clear, professional reports.
+        </p>
+      </div>
+
+      <div class="solutions-grid">
+        <!-- Academic & Technical Reports -->
+        <!-- changed div -> a (clickable) -->
+        <a href="academy.html" class="solution-card scroll-animate">
+          <div class="icon-wrapper">
+            <i class="fas fa-file-lines"></i>
+          </div>
+          <h3>(Academic &amp; Technical)</h3>
+          <p>
+            Develop clear, well-structured and professionally presented research
+            reports based on verified data, statistical results, and academic
+            standards.
+          </p>
+        </a>
+
+        <!-- Questionnaire / Instrument Design -->
+        <a href="#" class="solution-card scroll-animate">
+          <div class="icon-wrapper">
+            <i class="fas fa-clipboard-list"></i>
+          </div>
+          <h3>Survey &amp; Instrument Design</h3>
+          <p>
+            Design structured questionnaires, interview guides and data-collection
+            tools that capture valid, reliable responses for real-world projects.
+          </p>
+        </a>
+
+        <!-- Data Analysis & Interpretation -->
+        <a href="#" class="solution-card scroll-animate">
+          <div class="icon-wrapper">
+            <i class="fas fa-database"></i>
+          </div>
+          <h3>Data Analysis &amp; Interpretation</h3>
+          <p>
+            Analyse qualitative and quantitative data using tools like NVivo,
+            SPSS, R, Python, Excel, or Power BI, and interpret findings with
+            clarity and precision.
+          </p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================
+       BUSINESS ANALYTICS (SECOND BLOCK)
+  ================================== -->
+  <section class="tech-solutions-section">
+    <div class="container">
+      <div class="section-header scroll-animate">
+        <h2 class="section-title">Business Analytics</h2>
+        <p class="section-intro">
+          We help businesses understand their market, measure performance,
+          and make data-driven strategic decisions. Our analytics solutions
+          provide clarity, direction, and competitive advantage.
+        </p>
+      </div>
+
+      <div class="solutions-grid">
+        <!-- Market Research & Competitor Analytics -->
+        <a href="#" class="solution-card scroll-animate">
+          <div class="icon-wrapper">
+            <i class="fas fa-magnifying-glass-chart"></i>
+          </div>
+          <h3>Market Research &amp; Competitor Analytics</h3>
+          <p>
+            Understand your market trends, customer behaviour, and competitors
+            using structured research to guide strategy and positioning.
+          </p>
+        </a>
+
+        <!-- ROI & Performance Metrics -->
+        <a href="#" class="solution-card scroll-animate">
+          <div class="icon-wrapper">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h3>ROI &amp; Performance Metrics</h3>
+          <p>
+            Measure business performance, profitability, and operational
+            efficiency using clearly defined KPIs and data-backed metrics.
+          </p>
+        </a>
+
+        <!-- Customer Insight & Feedback Analysis -->
+        <a href="#" class="solution-card scroll-animate">
+          <div class="icon-wrapper">
+            <i class="fas fa-users"></i>
+          </div>
+          <h3>Customers’ Insight &amp; Feedback Analysis</h3>
+          <p>
+            Understand customer satisfaction, buying behaviour, pain-points and
+            improvement areas through structured feedback, surveys, and review
+            analysis.
+          </p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================
+       OPTIONAL: CALL-TO-ACTION STRIP
+  ================================== -->
+  <section class="tech-training-section">
+    <div class="container">
+      <div class="section-header scroll-animate">
+        <h2 class="section-title">Need Support With Your Next Project?</h2>
+        <p class="section-intro">
+          Whether you’re preparing an academic thesis, an internal business
+          report, or a full analytics dashboard, R-TECH can support you at each
+          stage — from research design to final presentation.
+        </p>
+      </div>
+
+      <div class="training-grid">
+        <a href="#contact" class="training-card scroll-animate">
+          <div class="icon-wrapper">
+            <i class="fas fa-handshake-angle"></i>
+          </div>
+          <h3>1-to-1 Research Support</h3>
+          <p>
+            Get personalised guidance on topic refinement, methodology,
+            instrument design, and data analysis for your academic or technical work.
+          </p>
+        </a>
+
+        <a href="#contact" class="training-card scroll-animate">
+          <div class="icon-wrapper">
+            <i class="fas fa-chalkboard-user"></i>
+          </div>
+          <h3>Workshops &amp; Training</h3>
+          <p>
+            Group sessions on data analysis tools, research writing, and business
+            analytics dashboards for teams, schools, or organisations.
+          </p>
+        </a>
+
+        <a href="#contact" class="training-card scroll-animate">
+          <div class="icon-wrapper">
+            <i class="fas fa-diagram-project"></i>
+          </div>
+          <h3>Done-For-You Analytics</h3>
+          <p>
+            We handle the full analytics pipeline — from data cleaning to
+            dashboard design — so you can focus on decision-making.
+          </p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================
+       R-TECH CHATBOT WIDGET
+  ================================== -->
+  <div class="rtech-chatbot scroll-animate">
+    <div class="chatbot-toggle" id="chatbotToggle">
+      <img src="logo/chatbot.png" alt="R-TECH Bot">
+    </div>
+
+    <div class="chatbot-box" id="chatbotBox">
+      <div class="chatbot-header">
+        <div class="bot-info">
+          <img src="images/rtech-bot.png" alt="R-TECH Bot Avatar">
+          <span>R-TECH Assistant</span>
+        </div>
+        <button id="closeChatbot" aria-label="Close chatbot">&times;</button>
+      </div>
+
+      <div class="chatbot-content" id="chatbotMessages">
+        <div class="bot-msg">
+          👋 Hello! I’m R-TECH. How can I help you today?
+        </div>
+      </div>
+
+      <div class="chatbot-input">
+        <input type="text" id="userInput" placeholder="Type a message..." />
+        <button id="sendBtn" aria-label="Send message">➤</button>
+      </div>
+    </div>
+  </div>
+
+<!-- ===================================================================================================================================
+        NEWSLETTER / FOOTER				NEWSLETTER / FOOTER					NEWSLETTER / FOOTER		NEWSLETTER / FOOTER
+====================================================================================================================================== -->
+<section class="qei-newsletter" aria-labelledby="qei-newsletter-title">
+  <div class="qei-newsletter-bg"></div>
+
+  <div class="qei-newsletter-wrap">
+
+    <!-- Newsletter Title -->
+    <h2 id="qei-newsletter-title" class="qei-newsletter-heading">
+      Subscribe to get our Newsletter
+    </h2>
+
+    <!-- Newsletter Form -->
+    <form class="qei-newsletter-form" action="#" method="post" novalidate>
+      <label for="qei-newsletter-email" class="sr-only">Your Email</label>
+      <input
+        id="qei-newsletter-email"
+        name="email"
+        type="email"
+        placeholder="Your Email"
+        required
+      />
+      <button type="submit">Subscribe</button>
+    </form>
+
+    <!-- footer links -->
+    <nav class="qei-newsletter-links" aria-label="Footer">
+      <a href="#">Careers</a>
+      <span class="qei-newsletter-sep">|</span>
+      <a href="#">Privacy Policy</a>
+      <span class="qei-newsletter-sep">|</span>
+      <a href="#">Terms &amp; Conditions</a>
+    </nav>
+
+    <!-- ================= MAIN FOOTER ROW (like web.dev) ================= -->
+   <div class="qei-footer-extras">
+
+  <div class="qei-footer-contact">
+    <span><strong>Phone:</strong> +234 80 0000 0000</span>
+    <span><strong>Email:</strong> info@rtechdigital.com</span>
+    <span><strong>Address:</strong> Abuja, Nigeria.</span>
+  </div>
+
+  <div class="qei-footer-social-icons">
+    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+  </div>
+
+</div>
+    <!-- Copyright -->
+    <p class="qei-newsletter-copy">© 2025 Rtech Technology. All Rights Reserved.</p>
+  </div>
+</section>
+ <!-- ===================================================================================================================================
+       END END  NEWSLETTER / FOOTER			END END 	NEWSLETTER / FOOTER					END END END 	NEWSLETTER / FOOTER
+  ====================================================================================================================================== -->
+
+  <!-- =================================
+       SCRIPTS
+  ================================== -->
+
+  <!-- Load header and enable mobile menu -->
+  <script>
+    fetch("header.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("header").innerHTML = data;
+
+        const menuToggle = document.getElementById("mobile-menu");
+        const nav = document.querySelector("nav");
+
+        if (menuToggle && nav) {
+          menuToggle.addEventListener("click", () => {
+            menuToggle.classList.toggle("active");
+            nav.classList.toggle("active");
+          });
+        }
+      })
+      .catch(error => console.error("Error loading header:", error));
+  </script>
+
+  <!-- Chatbot behaviour -->
+  <script>
+    const toggleBtn = document.getElementById("chatbotToggle");
+    const chatBox = document.getElementById("chatbotBox");
+    const closeBtn = document.getElementById("closeChatbot");
+    const sendBtn = document.getElementById("sendBtn");
+    const userInput = document.getElementById("userInput");
+    const chatMessages = document.getElementById("chatbotMessages");
+
+    if (toggleBtn && chatBox) {
+      toggleBtn.addEventListener("click", () => {
+        chatBox.style.display = chatBox.style.display === "block" ? "none" : "block";
+      });
+    }
+
+    if (closeBtn && chatBox) {
+      closeBtn.addEventListener("click", () => {
+        chatBox.style.display = "none";
+      });
+    }
+
+    if (sendBtn && userInput) {
+      sendBtn.addEventListener("click", sendMessage);
+      userInput.addEventListener("keypress", (e) => {
+        if (e.key === "Enter") {
+          e.preventDefault();
+          sendMessage();
+        }
+      });
+    }
+
+    function sendMessage() {
+      const userMsg = userInput.value.trim();
+      if (!userMsg) return;
+
+      const userDiv = document.createElement("div");
+      userDiv.classList.add("user-msg");
+      userDiv.textContent = userMsg;
+      chatMessages.appendChild(userDiv);
+
+      userInput.value = "";
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+
+      setTimeout(() => {
+        const botDiv = document.createElement("div");
+        botDiv.classList.add("bot-msg");
+
+        const msg = userMsg.toLowerCase();
+        if (msg.includes("research")) {
+          botDiv.textContent = "We support topic selection, methodology, data analysis and full research reports.";
+        } else if (msg.includes("analytics") || msg.includes("data")) {
+          botDiv.textContent = "We help you analyse data, build dashboards and interpret insights for better decisions.";
+        } else if (msg.includes("support")) {
+          botDiv.textContent = "You can contact support through our contact page or email.";
+        } else {
+          botDiv.textContent = "Thanks for your message! A member of our team will follow up shortly.";
+        }
+
+        chatMessages.appendChild(botDiv);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+      }, 700);
+    }
+  </script>
+
+  <!-- Scroll-in / Scroll-out animation -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const animatedElements = document.querySelectorAll('.scroll-animate');
+
+      if ('IntersectionObserver' in window && animatedElements.length > 0) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('in-view');
+            } else {
+              entry.target.classList.remove('in-view');
+            }
+          });
+        }, { threshold: 0.15 });
+
+        animatedElements.forEach(el => observer.observe(el));
+      } else {
+        animatedElements.forEach(el => el.classList.add('in-view'));
+      }
+    });
+  </script>
+
+</body>
+</html>

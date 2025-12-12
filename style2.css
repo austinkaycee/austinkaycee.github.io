@@ -1,0 +1,2500 @@
+html {
+    scroll-behavior: smooth;
+}
+/* =========================================
+   BRAND COLORS
+========================================= */
+:root {
+    --navy: #13277e;  /* Your correct brand navy */
+    --gold: #C9A20B;
+    --white: #ffffff;
+}
+/* =========================================
+   GLOBAL RESET
+========================================= */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} 
+
+/* ===============================
+   NAVBAR / HEADER
+   (styles used by header.html)
+================================= */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.navbar {
+  background-color: #fff;
+  padding: 1.2rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.logo a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.logo a img {
+  display: block;
+  height: 40px;
+  width: auto;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.8rem;
+}
+
+.nav-links a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #13277e;
+}
+
+.btn-signup {
+  background: linear-gradient(90deg, #fff9d9, #ffe78b);
+  color: #13277e !important;
+  padding: 0.6rem 1.4rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  border: 1px solid #e0e0e0;
+  transition: all 0.3s ease;
+}
+
+.btn-signup:hover {
+  background: linear-gradient(90deg, #fff2b0, #ffd46b);
+  color: #000 !important;
+}
+
+/* Header Styling */
+.main-header {
+  background-color: #ffffff;
+  padding: 15px 100px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  position: relative;
+  height: 94px;
+  z-index: 100;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-header .logo img {
+  height: 46px;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+}
+
+.main-nav ul li {
+  margin-left: 50px;
+  margin-top: 14px;
+}
+
+.main-nav ul li a {
+  text-decoration: none;
+  color: #6c6c6c;
+  transition: color 0.3s ease;
+  font-family: Arial, sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 100%;
+}
+
+/* Generic button base (for header, if needed) */
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  border: none;
+  height: 52px;
+  width: 150px;
+}
+
+.main-nav .btn {
+  margin-left: 30px;
+}
+
+/* Dropdown Styling */
+.nav-links li {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  list-style: none;
+  padding: 10px 0;
+  min-width: 200px;
+  z-index: 999;
+}
+
+.dropdown-menu li {
+  margin: 0;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 10px 20px;
+  color: #6c6c6c;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #13277e;
+  color: #fff;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+
+/* ===================================================================================================================================
+   WEB APPS & PLATFORMS – VIDEO BACKGROUND			WEB APPS & PLATFORMS – VIDEO BACKGROUND
+=================================================================================================================================== */
+
+.rt-webapps {
+  position: relative;
+  padding: 4.5rem 5vw 5rem;
+  color: var(--white);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  background-color: var(--navy); /* fallback if video fails */
+}
+
+/* background video fills section */
+.rt-webapps__video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* navy overlay with slight gold tint */
+.rt-webapps__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: linear-gradient(
+    120deg,
+    rgba(0, 31, 63, 0.9) 0%,
+    rgba(0, 31, 63, 0.85) 50%,
+    rgba(201, 162, 11, 0.25) 100%
+  );
+}
+
+.rt-webapps__inner {
+  position: relative;
+  z-index: 3;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.1fr);
+  gap: 3.5rem;
+  align-items: center;
+}
+
+/* LEFT TEXT */
+.rt-webapps__eyebrow {
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin: 0 0 1rem;
+  color: var(--gold);
+}
+
+.rt-webapps__title {
+  font-size: clamp(2rem, 2.4vw + 1rem, 3rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin: 0 0 1.2rem;
+  color: var(--white);
+}
+
+.rt-webapps__subtitle {
+  font-size: 0.98rem;
+  max-width: 30rem;
+  margin: 0 0 1.6rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.rt-webapps__list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem;
+}
+
+.rt-webapps__list li {
+  font-size: 0.94rem;
+  margin-bottom: 0.6rem;
+  position: relative;
+  padding-left: 1.4rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.rt-webapps__list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--gold);
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.rt-webapps__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 1.4rem;
+}
+
+/* CTA uses your gold */
+.rt-webapps__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9rem 1.8rem;
+  border-radius: 999px;
+  background-color: var(--gold);
+  color: var(--navy);
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.35);
+  transition: transform 0.12s ease, box-shadow 0.12s ease, filter 0.12s ease;
+}
+
+.rt-webapps__cta:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.03);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.45);
+}
+
+.rt-webapps__link {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #fef3c7;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(254, 243, 199, 0.5);
+  padding-bottom: 2px;
+}
+
+.rt-webapps__link:hover {
+  border-bottom-color: #ffffff;
+  color: #ffffff;
+}
+
+/* RIGHT – PHONE MOCKUPS (same as before, just adjusted slightly) */
+.rt-webapps__visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 1.6rem;
+}
+
+/* phone shell */
+.rt-phone {
+  position: relative;
+  width: 210px;
+  padding: 0.9rem 0.8rem 1rem;
+  border-radius: 34px;
+  background: #fefefe;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  font-size: 0.74rem;
+  color: #111827;
+}
+
+.rt-phone--primary {
+  transform: translateY(8px) rotate(-6deg);
+}
+.rt-phone--secondary {
+  transform: translateY(-8px) rotate(6deg);
+}
+
+/* status bar */
+.rt-phone__statusbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  color: #4b5563;
+}
+
+.rt-phone__signal {
+  width: 32px;
+  height: 4px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #9ca3af, #111827);
+}
+
+/* cards inside phone */
+.rt-phone__card {
+  border-radius: 14px;
+  padding: 0.7rem 0.7rem 0.8rem;
+}
+
+.rt-phone__card--quiz {
+  background: linear-gradient(135deg, #13277e, #4b6fd8);
+  color: #f9fafb;
+}
+
+.rt-phone__card--events {
+  background-color: #e0f5ff;
+}
+
+.rt-phone__card--news {
+  background-color: #fff6e5;
+}
+
+.rt-phone__card--chat {
+  background-color: #e7f7f0;
+}
+
+.rt-phone__label,
+.rt-phone__eyebrow {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.9;
+  margin-bottom: 0.3rem;
+}
+
+.rt-phone__value {
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin: 0 0 0.3rem;
+}
+
+.rt-phone__hint {
+  margin: 0;
+  font-size: 0.68rem;
+  opacity: 0.9;
+}
+
+/* small pill button */
+.rt-phone__pill {
+  margin-top: 0.4rem;
+  border: none;
+  border-radius: 999px;
+  padding: 0.3rem 0.9rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  background-color: #111827;
+  color: #f9fafb;
+}
+
+/* footer icons */
+.rt-phone__footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top: 0.4rem;
+  border-top: 1px solid #e5e7eb;
+  font-size: 0.9rem;
+}
+
+.rt-phone__icon {
+  opacity: 0.8;
+}
+
+/* floating badge on secondary phone */
+.rt-phone__badge {
+  position: absolute;
+  top: 18%;
+  right: -18px;
+  padding: 0.35rem 0.8rem;
+  font-size: 0.7rem;
+  border-radius: 999px;
+  background: #111827;
+  color: #f9fafb;
+  box-shadow: 0 10px 20px rgba(15, 23, 42, 0.8);
+}
+
+/* RESPONSIVE */
+@media (max-width: 960px) {
+  .rt-webapps__inner {
+    grid-template-columns: 1fr;
+    gap: 2.8rem;
+  }
+
+  .rt-webapps__visual {
+    order: -1; /* phones on top for mobile */
+  }
+
+  .rt-webapps {
+    padding: 3.5rem 1.5rem 4rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .rt-webapps__visual {
+    transform: scale(0.95);
+  }
+}
+
+/* ================================
+   Scroll Reveal Animation Styles
+================================= */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+/* from sides */
+.fade-left {
+  transform: translateX(-60px);
+}
+
+.fade-right {
+  transform: translateX(60px);
+}
+
+/* when in view */
+.reveal.in-view {
+  opacity: 1;
+  transform: translateX(0) translateY(0);
+}
+/* ===================================================================================================================================
+  END END END END WEB APPS & PLATFORMS – VIDEO BACKGROUND		END END END	WEB APPS & PLATFORMS – VIDEO BACKGROUND
+=================================================================================================================================== */
+
+/* =========================================
+   CLIENT LOGOS / PARTNERS STRIP
+========================================= */
+
+.rt-clients {
+  padding: 3rem 5vw 2.5rem;
+  background-color: #ffffff;
+}
+
+.rt-clients__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.rt-clients__title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: none;
+  margin: 0 0 2rem;
+  color: #13277e;
+}
+
+/* logo row */
+.rt-clients__logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.rt-clients__logo {
+  max-height: 44px;
+  width: auto;
+  display: block;
+  opacity: 0.95;               /* keep natural tone */
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+.rt-clients__logo:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+/* responsive tweak */
+@media (max-width: 768px) {
+  .rt-clients {
+    padding: 2.5rem 1.5rem 2rem;
+  }
+
+  .rt-clients__logos {
+    gap: 2rem;
+  }
+
+  .rt-clients__logo {
+    max-height: 36px;
+  }
+}
+/* ====================================================================================================================
+  END					END							END				 CLIENT LOGOS / PARTNERS STRIP
+==================================================================================================================== */
+
+/* ===========================================================================================================================================
+   PWA / APP-LIKE EXPERIENCE SECTION
+================================================================================================================================================== */
+
+.rt-pwa {
+  padding: 6rem 5vw 3rem; /* instead of 0rem */
+  background-color: #ffffff;
+  color: #111827;
+}
+
+.rt-pwa__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr; /* like the reference */
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+/* LEFT */
+.rt-pwa__title {
+  font-size: clamp(2rem, 2.8vw + 1rem, 3rem);
+  font-weight: 800;
+  line-height: 1.15;
+  margin: 0;
+  color: #13277e;
+}
+
+/* RIGHT */
+.rt-pwa__lead {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  margin: 0 0 1.5rem;
+  color: #111827;
+}
+
+.rt-pwa__lead span {
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.rt-pwa__body {
+  font-size: 0.98rem;
+  line-height: 1.8;
+  margin: 0;
+  color: #4b5563;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .rt-pwa__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .rt-pwa__title {
+    margin-bottom: 1.5rem;
+  }
+}
+/* Scroll reveal for PWA section */
+
+.rt-reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 0.9s ease-out, transform 0.9s ease-out;
+}
+
+.rt-reveal--left {
+  transform: translateX(-80px);
+}
+
+.rt-reveal--right {
+  transform: translateX(80px);
+}
+
+.rt-reveal.in-view {
+  opacity: 1;
+  transform: translateX(0) translateY(0);
+}
+
+
+/* ICON UNDER HEADING */
+.rt-react-icon-title {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: flex-start; /* aligns under heading */
+}
+
+/* BIG ICON LOOK */
+.rt-react-icon {
+    font-size: 70px;
+    color: #61DAFB; /* React brand colour */
+    transition: transform .35s ease;
+}
+
+/* Hover Effect */
+.rt-react-icon:hover {
+    transform: scale(1.2) rotate(10deg);
+}
+/* IMAGE BELOW TEXT */
+.rt-pwa__image-wrapper {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: flex-start; /* aligns with your text */
+}
+
+/* Style the illustration */
+.rt-pwa__image {
+    width: 100%;
+    max-width: 100%;   /* bigger */
+    border-radius: 14px;
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.1);
+    transition: transform .35s ease, box-shadow .35s ease;
+}
+
+/* Hover pop effect */
+.rt-pwa__image:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 38px rgba(0, 0, 0, 0.18);
+}
+/* ===========================================================================================================================================
+END    END 		END  PWA / APP-LIKE EXPERIENCE SECTION
+================================================================================================================================================== */
+
+
+
+/* ================================================================================================================
+TECHNOLOGY WE USE			TECHNOLOGY WE USE				TECHNOLOGY WE USE
+===================================================================================================================== */
+/* === SECTION WRAPPER === */
+.rt-tech {
+    text-align: center;
+    padding: 4rem 5vw;
+}
+
+/* TITLE */
+.rt-tech__title {
+    font-size: clamp(2rem, 3vw, 2.6rem);
+    font-weight: 800;
+    color: #13277e;
+    margin-bottom: 3rem;
+}
+
+/* SUBTITLE */
+.rt-tech__subtitle {
+    font-size: 1rem;
+    max-width: 700px;
+    margin: -1.5rem auto 2.5rem;
+    color: #4b5563;
+    line-height: 1.6;
+}
+
+/* GRID */
+.rt-tech__grid {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+}
+
+/* CARD ITEM */
+.rt-tech__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .8rem;
+    transition: transform .25s ease;
+}
+
+/* ICON BASE */
+.tech-icon {
+    font-size: 60px;
+    transition: transform .3s ease, filter .3s ease;
+}
+
+/* HOVER EFFECT */
+.rt-tech__item:hover .tech-icon {
+    transform: scale(1.18);
+    filter: brightness(1.1);
+}
+
+/* LABEL */
+.rt-tech__item p {
+    font-size: .95rem;
+    font-weight: 600;
+    color: #13277e;
+}
+
+
+/* ===== CUSTOM COLOUR CLASSES ===== */
+.icon-blue { color: #2563eb; }
+.icon-red { color: #e11d48; }
+.icon-teal { color: #0d9488; }
+.icon-purple { color: #6d28d9; }
+.icon-yellow { color: #facc15; }
+.icon-green { color: #22c55e; }
+
+
+/* ====== SCROLL ANIMATION ======= */
+
+/* Hidden initial state */
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity .7s ease-out, transform .7s ease-out;
+}
+
+/* Fade-up variation */
+.fade-up {
+    transform: translateY(60px);
+}
+
+/* Visible state */
+.reveal.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* ================================================================================================================
+  END		END		END TECHNOLOGY WE USE		END END 	TECHNOLOGY WE USE		END	END		TECHNOLOGY WE USE
+===================================================================================================================== */
+    .reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.9s ease-out;
+}
+
+.reveal.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* optional direction variants */
+.fade-left { transform: translateX(-60px); }
+.fade-right { transform: translateX(60px); }
+.fade-up { transform: translateY(60px); }
+.fade-down { transform: translateY(-60px); }
+
+.fade-left.in-view,
+.fade-right.in-view,
+.fade-up.in-view,
+.fade-down.in-view {
+    transform: translate(0,0);
+}
+/* =========================================
+   GLOBAL HEADING COLOR OVERRIDE
+   (Except video section)
+========================================= */
+
+/* 1️⃣ Global heading colour for this page */
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6 {
+    color: #13277e;
+}
+
+/* 2️⃣ Newsletter / footer: lock background + text colour */
+.qei-newsletter {
+    /* restore your original gradient + make it untouchable */
+    background: radial-gradient(circle at top, #1d293b 0%, #020617 60%, #000 100%) !important;
+    color: #e5e7eb; /* base text colour */
+}
+
+.qei-newsletter h1,
+.qei-newsletter h2,
+.qei-newsletter h3,
+.qei-newsletter h4,
+.qei-newsletter h5,
+.qei-newsletter h6 {
+    color: #ffffff !important;
+}
+
+
+
+
+/* =========================================
+   NEWSLETTER SECTION
+========================================= */
+.qei-newsletter {
+  position: relative;
+  overflow: clip;
+  padding: 56px 16px 64px;
+  color: #eaf0ff;
+  isolation: isolate;
+}
+
+/* Gradient background */
+.qei-newsletter-bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(
+      1100px 600px at 85% 70%,
+      rgba(255, 255, 255, 0.08) 0%,
+      rgba(255, 255, 255, 0) 60%
+    ),
+    radial-gradient(
+      900px 500px at 15% 30%,
+      rgba(255, 255, 255, 0.07) 0%,
+      rgba(255, 255, 255, 0) 60%
+    ),
+    linear-gradient(180deg, #4b465a 0%, #0a1d78 60%, #061e64 100%);
+  box-shadow: inset 0 40px 60px rgba(0, 0, 0, 0.25);
+}
+
+.qei-newsletter-wrap {
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.qei-newsletter-heading {
+  font-size: clamp(1.8rem, 2.4vw, 2.1rem);
+  font-weight: 700;
+  margin: 0 0 1.5rem;
+}
+
+.qei-newsletter-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.qei-newsletter-form input {
+  min-width: 240px;
+  max-width: 320px;
+  padding: 0.6rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid #9ca3af;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.qei-newsletter-form button {
+  padding: 0.6rem 1.4rem;
+  border-radius: 999px;
+  border: none;
+  background-color: var(--gold);
+  color: #111827;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.qei-newsletter-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  justify-content: center;
+  font-size: 0.86rem;
+  color: #9ca3af;
+  margin-bottom: 0.5rem;
+}
+
+.qei-newsletter-links a {
+  color: #e5e7eb;
+  text-decoration: none;
+}
+
+.qei-newsletter-copy {
+  font-size: 0.8rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* Utility */
+.qei-newsletter-sep {
+  color: #4b5563;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+/* Extra Footer Content – cleaner layout */
+/* ================= EXTRA FOOTER LAYOUT ================= */
+/* =================== SINGLE-LINE FOOTER ROW ====================== */
+.qei-footer-extras {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: nowrap;        /* 🔥 prevents wrapping */
+  white-space: nowrap;      /* 🔥 keeps text inline */
+  max-width: 100%;
+  color: #e5e7eb;
+  font-size: 0.9rem;
+}
+
+/* Horizontal contact items */
+.qei-footer-contact {
+  display: flex;
+  gap: 1.5rem;   /* reduced spacing so icons fit */
+}
+
+.qei-footer-contact span {
+  white-space: nowrap;
+}
+
+/* Social icons inline right */
+.qei-footer-social-icons {
+  display: flex;
+  gap: 6px;      /* 🔥 tighter spacing */
+}
+
+.qei-footer-social-icons a {
+  background: rgba(255,255,255,0.15);
+  padding: 8px;
+  border-radius: 50%;
+  backdrop-filter: blur(3px);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.25s;
+}
+
+.qei-footer-social-icons i {
+  font-size: 0.95rem;
+  color: #eaf0ff;
+  transition: 0.25s;
+}
+
+.qei-footer-social-icons a:hover {
+  background: var(--gold);
+}
+.qei-footer-social-icons a:hover i {
+  color: #111827;
+}
+
+/* nice copyright spacing */
+.qei-newsletter-copy {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+/* Desktop spacing to spread them evenly */
+@media (min-width: 900px) {
+  .qei-footer-extras {
+    justify-content: space-between;
+    padding-inline: 2rem;
+  }
+}
+/* =========================================================================================
+  END 		END 		END  NEWSLETTER SECTION		END END 
+=============================================================================================== */
+/* =========================================================================================
+  END 		END 		END  NEWSLETTER SECTION		END END 
+=============================================================================================== */
+
+
+/* =========================================
+   R-TECH CHATBOT
+========================================= */
+.rtech-chatbot {
+  position: fixed;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  z-index: 999;
+}
+
+.chatbot-toggle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--gold);
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.chatbot-toggle img {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+}
+
+.chatbot-box {
+  position: absolute;
+  bottom: 74px;
+  right: 0;
+  width: 320px;
+  max-height: 420px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.35);
+  display: none;
+  overflow: hidden;
+}
+
+.chatbot-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  background-color: var(--navy);
+  color: #ffffff;
+}
+
+.bot-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.bot-info img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.chatbot-header button {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.chatbot-content {
+  padding: 0.75rem 1rem;
+  max-height: 260px;
+  overflow-y: auto;
+  background-color: #f9fafb;
+}
+
+.bot-msg,
+.user-msg {
+  font-size: 0.87rem;
+  margin-bottom: 0.5rem;
+  padding: 0.55rem 0.75rem;
+  border-radius: 12px;
+  max-width: 90%;
+}
+
+.bot-msg {
+  background-color: #e5e7eb;
+  color: #111827;
+  align-self: flex-start;
+}
+
+.user-msg {
+  background-color: var(--gold);
+  color: #111827;
+  margin-left: auto;
+  text-align: right;
+}
+
+.chatbot-input {
+  display: flex;
+  gap: 0.4rem;
+  padding: 0.6rem 0.75rem 0.75rem;
+  background-color: #ffffff;
+}
+
+.chatbot-input input {
+  flex: 1;
+  border-radius: 999px;
+  border: 1px solid #d1d5db;
+  padding: 0.5rem 0.8rem;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.chatbot-input button {
+  border-radius: 999px;
+  border: none;
+  background-color: var(--navy);
+  color: #ffffff;
+  padding: 0 0.9rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+/* =======================================================================
+  END		END		END 	R-TECH CHATBOT		END 	END
+====================================================================================== */
+    
+    
+ /* =================================================================================================================
+   GET A FREE QUOTE SECTION
+================================================================================================================= */
+.rt-quote {
+    padding: 4.5rem 5vw;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+}
+
+.quote-container {
+    max-width: 850px;
+    width: 100%;
+    background: #f8fafc;
+    border-radius: 14px;
+    padding: 2.5rem 2rem 3rem;
+    box-shadow: 0 10px 28px rgba(0,0,0,0.06);
+}
+
+/* Heading */
+.quote-title {
+    font-size: clamp(1.8rem, 2.4vw, 2.6rem);
+    font-weight: 800;
+    text-align: center;
+    margin: 0 0 0.8rem;
+    color: #13277e;
+}
+
+.quote-subtext {
+    text-align: center;
+    color: #4b5563;
+    margin-bottom: 2.2rem;
+    font-size: 1rem;
+}
+
+/* Form layout */
+.quote-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Two-column name/email row */
+.quote-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+}
+
+.quote-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+}
+
+/* Labels */
+.quote-field label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #13277e;
+}
+
+/* Inputs, select, textarea */
+.quote-field input,
+.quote-field select,
+.quote-field textarea {
+    padding: 0.8rem 1rem;
+    border-radius: 10px;
+    border: 1px solid #cbd5e1;
+    background: #ffffff;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Focus effect */
+.quote-field input:focus,
+.quote-field select:focus,
+.quote-field textarea:focus {
+    border-color: #13277e;
+    box-shadow: 0 0 0 2px rgba(19,39,126,0.15);
+}
+
+/* Textarea */
+.quote-field textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+/* Submit Button */
+.quote-submit {
+    width: 100%;
+    padding: 1rem 1.2rem;
+    background: #13277e;
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.25s ease, transform 0.2s ease;
+}
+
+/* Hover Effect */
+.quote-submit:hover {
+    background: #0e1c68;
+    transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .quote-row {
+        grid-template-columns: 1fr;
+    }
+
+    .quote-container {
+        padding: 2rem 1.2rem;
+    }
+}
+/* =================================================================================================================
+  ENDalign-content	ENDalign-content	 GET A FREE QUOTE SECTION
+================================================================================================================= */
+    
+    
+/* ==========================================================
+   CYBER SECURITY PROCESS / HOW WE SECURE YOUR BUSINESS
+=========================================================== */
+.rt-process {
+  padding: 4.5rem 5vw;
+  background-color: #f9fafb;
+}
+
+.rt-process__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.rt-process__title {
+  font-size: clamp(2rem, 2.6vw, 2.6rem);
+  font-weight: 800;
+  color: #13277e;
+  margin: 0 0 0.75rem;
+}
+
+.rt-process__subtitle {
+  font-size: 0.98rem;
+  line-height: 1.8;
+  color: #4b5563;
+  max-width: 720px;
+  margin: 0 auto 2.8rem;
+}
+
+/* GRID OF CARDS */
+.rt-process__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.9rem;
+}
+
+/* CARD BASE */
+.rt-process__card {
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 1.9rem 1.6rem 2rem;
+  text-align: left;
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.08);
+  border-top: 3px solid rgba(201, 162, 11, 0.15); /* subtle gold accent */
+  transition: transform 0.25s ease, box-shadow 0.25s ease,
+              border-top-color 0.25s ease;
+}
+
+.rt-process__card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.16);
+  border-top-color: var(--gold);
+}
+
+/* STEP BADGE */
+.rt-process__step {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.4rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.6rem;
+  border-radius: 999px;
+  background-color: rgba(19, 39, 126, 0.06);
+  color: #13277e;
+}
+
+/* ICON CIRCLE */
+.rt-process__icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.9rem;
+  margin-bottom: 1.1rem;
+  background: radial-gradient(circle at 30% 20%, #ffffff 0%, #dbeafe 55%, #bfdbfe 100%);
+  color: #13277e;
+}
+
+/* CARD TEXT */
+.rt-process__card-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 0 0 0.6rem;
+  color: #13277e;
+}
+
+.rt-process__card-text {
+  font-size: 0.93rem;
+  line-height: 1.8;
+  color: #4b5563;
+  margin: 0;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .rt-process {
+    padding: 3.5rem 1.5rem;
+  }
+
+  .rt-process__card {
+    padding: 1.7rem 1.4rem 1.8rem;
+  }
+}
+/* ==========================================================
+  END 			END 	END  CYBER SECURITY PROCESS / HOW WE SECURE YOUR BUSINESS
+=========================================================== */
+ 
+
+    
+/* ==========================================================
+   UI/UX Enrol Section 	----  UI/UX Enrol Section 
+=========================================================== */ 
+.rt-enrol {
+  padding: 4rem 5vw 4rem;
+  background-color: #ffffff;
+}
+
+.rt-enrol__inner {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.rt-enrol__title {
+  font-size: clamp(2rem, 2.6vw, 3rem);
+  font-weight: 800;
+  color: #13277e;
+  margin-bottom: 1rem;
+}
+
+.rt-enrol__subtitle {
+  font-size: 1rem;
+  color: #4b5563;
+  line-height: 1.6;
+  max-width: 550px;
+  margin: 0 auto 2.5rem;
+}
+
+.rt-enrol__form {
+  display: grid;
+  gap: 1.4rem;
+}
+
+.rt-enrol__form label {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  font-size: 0.95rem;
+  color: #13277e;
+  font-weight: 600;
+}
+
+.rt-enrol__form input,
+.rt-enrol__form select {
+  padding: 0.65rem 0.9rem;
+  border-radius: 10px;
+  border: 1px solid #cfd2d6;
+  font-size: 0.9rem;
+  outline: none;
+  background-color: #f8fafc;
+}
+
+.rt-enrol__cta {
+  background-color: #C9A20B;
+  color: #111827;
+  font-weight: 700;
+  padding: 0.9rem 1.4rem;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.rt-enrol__cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.15);
+}
+/* ==========================================================
+   END 		END 	UI/UX Enrol Section 	END ----  UI/UX Enrol Section 
+=========================================================== */ 
+    
+    
+    
+/* ==============================================================================================================================
+   UX COURSES STRIP  UX COURSES STRIP UX COURSES STRIP
+============================================================================================================================== */
+/* ==============================================================================================================================
+   UX COURSES STRIP (R-TECH UI/UX PAGE)
+========================================================== */
+.rt-uxcourses {
+  padding: 4rem 5vw 4.5rem;
+  background-color: #ffffff;
+}
+
+.rt-uxcourses__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Heading + subtitle */
+.rt-uxcourses__header {
+  text-align: left;
+  max-width: 720px;
+  margin: 0 auto 2.8rem;
+}
+
+.rt-uxcourses__heading {
+  font-size: clamp(2.2rem, 3vw, 3rem);
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 0 0 1rem;
+  color: #13277e; /* your brand navy */
+}
+
+.rt-uxcourses__subheading {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin: 0;
+  color: #4b5563;
+}
+
+/* Cards row */
+.rt-uxcourses__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.8rem;
+}
+
+/* Card container */
+.rt-uxcourses__card {
+  background-color: #ffffff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 16px 34px rgba(15, 23, 42, 0.12);
+  display: flex;
+  flex-direction: column;
+}
+
+/* IMAGE AREA */
+.rt-uxcourses__media {
+  position: relative;
+  min-height: 230px;
+}
+
+.rt-uxcourses__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* dark gradient over image */
+.rt-uxcourses__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.75) 0%,
+    rgba(0, 0, 0, 0.45) 40%,
+    rgba(0, 0, 0, 0.15) 75%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+/* White text title on image */
+.rt-uxcourses__card-title {
+  position: absolute;
+  left: 1.4rem;
+  right: 1.4rem;
+  bottom: 1.5rem;
+  margin: 0;
+  color: #ffffff;
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+/* META ROW */
+.rt-uxcourses__meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  padding: 1rem 1.4rem 0.9rem;
+  background-color: #ffffff;
+}
+
+.rt-uxcourses__status {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: 0 0 0.25rem;
+  color: #111827;
+}
+
+.rt-uxcourses__status--closed {
+  color: #b91c1c;
+}
+
+.rt-uxcourses__note,
+.rt-uxcourses__countdown {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+/* PROGRESS CIRCLE */
+.rt-uxcourses__progress {
+  width: 72px;
+  height: 72px;
+  border-radius: 999px;
+  border: 4px solid #0ea5e9; /* 98% booked */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.72rem;
+  line-height: 1.1;
+  color: #111827;
+}
+
+.rt-uxcourses__progress--full {
+  border-color: #ef4444; /* 100% booked */
+}
+
+.rt-uxcourses__progress-value {
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.rt-uxcourses__progress-label {
+  font-size: 0.75rem;
+}
+
+/* BLUE BUTTON BAR */
+.rt-uxcourses__btn {
+  margin-top: auto;
+  width: 100%;
+  border: none;
+  border-radius: 0 0 18px 18px;
+  padding: 0.95rem 1rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  background-color: #0284c7;
+  color: #ffffff;
+  transition: background-color 0.2s ease, transform 0.18s ease,
+              box-shadow 0.18s ease;
+}
+
+.rt-uxcourses__btn:hover {
+  background-color: #0369a1;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(15, 23, 42, 0.18);
+}
+
+/* Mobile tweaks */
+@media (max-width: 768px) {
+  .rt-uxcourses {
+    padding: 3rem 1.5rem 3.5rem;
+  }
+
+  .rt-uxcourses__header {
+    text-align: left;
+  }
+}
+    /* FORCE UX heading colour to match brand navy */
+.rt-uxcourses__heading {
+    color: #13277e !important;
+}
+/* ==========================================================
+   END END END END  UX COURSES STRIP
+========================================================== */
+    
+    
+    
+
+/* ==========================================================
+   HOW OUR COURSES HELP YOU – VIDEO SECTION (LARGE HERO STYLE)
+========================================================== */
+.rt-uxvideo {
+  padding: 6rem 5vw 6rem;
+  background-color: #0b1323; /* deeper navy tone */
+  color: #e5e7eb;
+}
+
+.rt-uxvideo__inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Title */
+.rt-uxvideo__title {
+  font-size: clamp(2.2rem, 3.2vw, 3rem);
+  font-weight: 800;
+  margin: 0 0 2.8rem;
+  color: #ffffff;
+}
+
+/* Big video container */
+.rt-uxvideo__player {
+  position: relative;
+  max-width: 1200px;
+  height: 480px;                /* <- bigger height */
+  margin: 0 auto;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+}
+
+/* Responsive video fill */
+.rt-uxvideo__player video,
+.rt-uxvideo__player iframe {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* MOBILE: full width + reduced height */
+@media (max-width: 768px) {
+  .rt-uxvideo__player {
+    height: 260px;
+  }
+}
+   /* ==========================================================
+   HOW OUR COURSES HELP YOU – VIDEO SECTION
+========================================================== */
+    
+    
+    
+    /* ============================================================================================================================================
+   TESTIMONIALS SECTION							ESTIMONIALS SECTION							ESTIMONIALS SECTION
+============================================================================================================================================ */
+.testimonials {
+    padding: 4rem 5vw 5rem;
+    background-color: #f7f9fc;
+}
+
+.testimonials__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.testimonials__header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+/* Gradient-like heading similar to screenshot */
+.testimonials__title {
+    font-size: clamp(2rem, 3vw, 2.6rem);
+    font-weight: 800;
+    margin: 0 0 0.75rem;
+    color: #4b3a72; /* deep purple base */
+}
+
+.testimonials__title span {
+    background: linear-gradient(90deg, #4b3a72, var(--gold));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.testimonials__subtitle {
+    font-size: 0.95rem;
+    color: #6b7280;
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+/* Scrolling row */
+.testimonials__track-wrapper {
+    overflow: hidden;
+    margin-top: 2.5rem;
+}
+
+.testimonials__track {
+    display: flex;
+    gap: 1.8rem;
+    width: max-content; /* shrink to content for smooth scroll */
+    animation: testimonials-scroll 40s linear infinite;
+}
+
+/* Pause on hover */
+.testimonials__track:hover {
+    animation-play-state: paused;
+}
+
+/* Individual card */
+.testimonial-card {
+    background-color: #ffffff;
+    border-radius: 18px;
+    padding: 1.6rem 1.5rem 1.7rem;
+    box-shadow: 0 10px 22px rgba(15, 23, 42, 0.08);
+    border-left: 4px solid var(--gold);
+    min-width: 320px;   /* width of each slide */
+    max-width: 360px;
+}
+
+.testimonial-card__rating {
+    color: var(--gold);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.testimonial-card__text {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #4b5563;
+    margin: 0 0 1.2rem;
+    font-style: italic;
+}
+
+.testimonial-card__author {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #13277e; /* your deep navy accent */
+    margin: 0;
+}
+
+/* Scroll animation â€“ moves slowly to the left */
+@keyframes testimonials-scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .testimonials {
+        padding: 3rem 1.5rem 4rem;
+    }
+
+    .testimonial-card {
+        min-width: 260px;
+    }
+}
+/* ============================================================================================================================================
+   END END END TESTIMONIALS SECTION						END END	ESTIMONIALS SECTION					END	ESTIMONIALS SECTION
+
+
+
+
+
+/* ==========================================================
+   "Making your business work better" SECTION
+========================================================== */
+.rt-workbetter {
+  padding: 4.5rem 5vw 4.5rem;
+  background-color: #ffffff;
+}
+
+.rt-workbetter__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 3rem;
+  align-items: center;
+}
+
+/* Illustration */
+.rt-workbetter__illustration img {
+  width: 100%;
+  max-width: 420px;
+  display: block;
+}
+
+/* Text content */
+.rt-workbetter__content {
+  font-size: 0.98rem;
+  line-height: 1.8;
+  color: #374151; /* neutral dark grey for body text */
+}
+
+.rt-workbetter__title {
+  font-size: clamp(2.1rem, 2.8vw + 1rem, 3rem);
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 0 0 1.4rem;
+  color: var(--navy); /* uses your brand navy */
+}
+
+.rt-workbetter__lead {
+  margin: 0 0 1.1rem;
+  font-size: 1rem;
+  color: #111827;
+}
+
+/* CTA styled like the red text link in the screenshot,
+   but using your gold + navy colours */
+.rt-workbetter__cta {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 1.6rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  color: var(--gold);
+  border-bottom: 2px solid var(--gold);
+  padding-bottom: 0.1rem;
+  transition: color 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+}
+
+.rt-workbetter__cta:hover {
+  color: var(--navy);
+  border-color: var(--navy);
+  transform: translateY(-1px);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .rt-workbetter__inner {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .rt-workbetter__illustration {
+    text-align: center;
+  }
+
+  .rt-workbetter__illustration img {
+    margin: 0 auto;
+  }
+}
+/* ==========================================================
+  END 		END 		 "Making your business work better" SECTION
+========================================================== */
+
+
+/* ==========================================================
+   WHAT SOLUTIONS WE PROVIDE – CARDS
+========================================================== */
+.rt-solutions {
+  padding: 4.5rem 5vw 5rem;
+  background-color: #f9fafb;
+}
+
+.rt-solutions__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.rt-solutions__header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.rt-solutions__title {
+  font-size: clamp(2rem, 2.6vw, 2.6rem);
+  font-weight: 800;
+  margin: 0 0 0.8rem;
+  color: var(--navy);
+}
+
+.rt-solutions__subtitle {
+  max-width: 640px;
+  margin: 0 auto;
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: #4b5563;
+}
+
+/* Grid */
+.rt-solutions__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+}
+
+/* Card base */
+.rt-solutions__card {
+  background-color: #ffffff;
+  border-radius: 22px;
+  padding: 2.2rem 2rem 2.3rem;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.06);
+  text-align: center;
+  transition:
+    transform 0.45s cubic-bezier(0.19, 1, 0.22, 1),
+    box-shadow 0.35s ease,
+    opacity 0.45s ease;
+}
+
+/* Extra motion when appearing */
+/* Cards: zoom from inner centre of screen */
+/* Cards slow zoom animation */
+.rt-solutions__card.reveal {
+  opacity: 0;
+  transform: scale(0.75);
+  transform-origin: center;
+  transition:
+    opacity 1.2s ease-out,
+    transform 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.rt-solutions__card.reveal.in-view {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Stagger effect — each card waits longer before animating */
+.rt-solutions__card:nth-child(1) {
+  transition-delay: 0.2s;
+}
+.rt-solutions__card:nth-child(2) {
+  transition-delay: 0.5s;
+}
+.rt-solutions__card:nth-child(3) {
+  transition-delay: 0.8s;
+}
+.rt-solutions__card:nth-child(4) {
+  transition-delay: 1.1s;
+}
+.rt-solutions__card:nth-child(5) {
+  transition-delay: 1.4s;
+}
+.rt-solutions__card:nth-child(6) {
+  transition-delay: 1.7s;
+}
+
+.rt-solutions__card.reveal:not(.in-view) {
+  transition-delay: 0s !important;
+}
+
+
+/* Hover effect */
+.rt-solutions__card:hover {
+  box-shadow: 0 24px 55px rgba(15, 23, 42, 0.14);
+  transform: translateY(-4px) scale(1.02);
+}
+
+/* Icon / blob */
+.rt-solutions__icon-wrap {
+  margin-bottom: 1.4rem;
+  display: flex;
+  justify-content: center;
+}
+
+.rt-solutions__icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: #ffffff;
+  background: radial-gradient(circle at 30% 20%, #ffffff 0%, #13277e 40%, #001f3f 100%);
+}
+
+/* Icon library icon */
+.rt-solutions__icon i {
+  line-height: 1;
+}
+
+/* Text */
+.rt-solutions__card-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 0 0 0.6rem;
+  color: #111827;
+}
+
+.rt-solutions__card-text {
+  font-size: 0.93rem;
+  line-height: 1.8;
+  color: #6b7280;
+  margin: 0 0 1.6rem;
+}
+
+/* CTA link (small pill) */
+.rt-solutions__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.45rem 1.3rem;
+  border-radius: 999px;
+  background-color: #e5e7eb;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--navy);
+  transition: background-color 0.25s ease, color 0.25s ease, transform 0.2s ease;
+}
+
+.rt-solutions__cta:hover {
+  background-color: var(--gold);
+  color: #111827;
+  transform: translateY(-1px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .rt-solutions {
+    padding: 3.5rem 1.5rem 4rem;
+  }
+}
+/* ==========================================================
+   END  	END  WHAT SOLUTIONS WE PROVIDE – CARDS
+========================================================== */
+
+/* ==========================================================
+   GET CERTIFIED CTA SECTION
+========================================================== */
+/* ==========================================================
+   GET CERTIFIED CTA SECTION (R-TECH)
+========================================================== */
+.rt-cert {
+  background-color: var(--navy);     /* your brand navy */
+  color: #ffffff;
+  position: relative;
+  overflow: visible;                 /* allow image to pop a bit */
+}
+
+/* inner wrapper behaves like the .row with fixed height in the template */
+.rt-cert__wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 5vw;                 /* small background height */
+  min-height: 250px;                 /* like the template: row height */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+/* TEXT SIDE */
+.rt-cert__content {
+  max-width: 480px;
+}
+
+.rt-cert__title {
+  font-size: clamp(2rem, 2.4vw, 2.4rem);
+  font-weight: 800;
+  margin: 0 0 0.6rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #ffffff;
+}
+
+.rt-cert__title i {
+  font-size: 1.6rem;
+}
+
+.rt-cert__text {
+  font-size: 0.98rem;
+  line-height: 1.8;
+  margin: 0 0 1.4rem;
+  color: #e5e7eb;
+}
+
+/* BUTTON */
+.rt-cert__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background-color: var(--gold);
+  color: #111827;
+  font-weight: 700;
+  padding: 0.8rem 1.7rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: 0.25s ease;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.25);
+}
+
+.rt-cert__cta:hover {
+  background-color: #f0c40d;
+  transform: translateY(-2px);
+}
+
+/* IMAGE SIDE – smaller bg, image sits nicely and a bit out */
+.rt-cert__visual img {
+  display: block;
+  max-height: 220px;                /* controls image size */
+  margin-top: 10px;                 /* lowers image slightly */
+  margin-bottom: -20px;             /* lets it come out a little */
+  filter: drop-shadow(0 8px 18px rgba(0,0,0,0.25));
+}
+
+/* RESPONSIVE */
+@media (max-width: 860px) {
+  .rt-cert__wrap {
+    flex-direction: column;
+    text-align: center;
+    min-height: auto;
+    padding: 1.5rem 1.5rem;
+  }
+
+  .rt-cert__content {
+    max-width: 100%;
+  }
+
+  .rt-cert__visual img {
+    margin: 10px auto -20px;
+  }
+}
+/* ==========================================================
+   END 		END 	END 	GET CERTIFIED CTA SECTION
+========================================================== */
+
+/* =======================================================================================================================
+   MEET OUR TEAM SECTION 				MEET OUR TEAM SECTION							MEET OUR TEAM SECTION
+=================================================================================================================== */
+/* ======================================================================
+   MEET OUR TEAM SECTION (NEW, UNIQUE CLASSES)
+====================================================================== */
+.rt-team-section {
+  padding: 4.5rem 5vw 4.5rem;
+  background-color: #ffffff;
+}
+
+.rt-team-section__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+.rt-team-section__header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.rt-team-section__title {
+  font-size: clamp(2rem, 2.8vw, 2.6rem);
+  font-weight: 800;
+  margin: 0 0 0.75rem;
+  color: var(--navy);
+}
+
+.rt-team-section__subtitle {
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: #4b5563;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+/* Grid */
+.rt-team-section__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 2rem;
+}
+
+/* Card */
+.rt-team-card {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 2rem 1.7rem 2.1rem;
+  text-align: center;
+  box-shadow: 0 16px 38px rgba(15, 23, 42, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.rt-team-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 50px rgba(15, 23, 42, 0.16);
+}
+
+/* Avatar */
+.rt-team-card__avatar-wrap {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+  overflow: hidden;
+  border: 4px solid rgba(201, 162, 11, 0.6); /* gold ring */
+}
+
+.rt-team-card__avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Text */
+.rt-team-card__name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 0 0 0.25rem;
+  color: #111827;
+}
+
+.rt-team-card__role {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--navy);
+  margin: 0 0 0.8rem;
+}
+
+.rt-team-card__bio {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: #4b5563;
+  margin: 0 0 1.2rem;
+}
+
+/* Socials */
+.rt-team-card__socials {
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.rt-team-card__social-link {
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
+  background-color: #e5e7eb;
+  color: var(--navy);
+  transition: background-color 0.25s ease, color 0.25s ease,
+              transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.rt-team-card__social-link:hover {
+  background-color: var(--gold);
+  color: #111827;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.18);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .rt-team-section {
+    padding: 3.5rem 1.5rem 4rem;
+  }
+}
+/* ==========================================================================================================================================
+ END END END  MEET OUR TEAM SECTION 		END END END MEET OUR TEAM SECTION				END END	MEET OUR TEAM SECTION
+====================================================================================================================================== */
+
+/* ==========================================================
+   BOOK A QUOTE SECTION
+========================================================== */
+.rt-bookquote {
+  padding: 4.5rem 5vw 4.5rem;
+  background-color: #f9fafb;
+}
+
+.rt-bookquote__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 2.5rem;
+  align-items: flex-start;
+}
+
+/* LEFT COPY */
+.rt-bookquote__title {
+  font-size: clamp(2rem, 2.6vw, 2.4rem);
+  font-weight: 800;
+  margin: 0 0 0.8rem;
+  color: var(--navy);
+}
+
+.rt-bookquote__lead {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #4b5563;
+  margin: 0 0 1.4rem;
+}
+
+.rt-bookquote__points {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.3rem;
+}
+
+.rt-bookquote__points li {
+  font-size: 0.95rem;
+  color: #374151;
+  margin-bottom: 0.5rem;
+  padding-left: 1.4rem;
+  position: relative;
+}
+
+.rt-bookquote__points li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--gold);
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.rt-bookquote__note {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: #6b7280;
+}
+
+/* FORM */
+.rt-bookquote__form {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 2rem 1.8rem 2.3rem;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+
+.rt-bookquote__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.rt-bookquote__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.rt-bookquote__field label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--navy);
+}
+
+.rt-bookquote__field input,
+.rt-bookquote__field select,
+.rt-bookquote__field textarea {
+  padding: 0.75rem 0.9rem;
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+  font-size: 0.92rem;
+  background-color: #ffffff;
+  outline: none;
+  transition: border-color 0.22s ease, box-shadow 0.22s ease;
+}
+
+.rt-bookquote__field input:focus,
+.rt-bookquote__field select:focus,
+.rt-bookquote__field textarea:focus {
+  border-color: var(--navy);
+  box-shadow: 0 0 0 2px rgba(19, 39, 126, 0.15);
+}
+
+.rt-bookquote__field textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+/* BUTTON */
+.rt-bookquote__submit {
+  margin-top: 0.5rem;
+  width: 100%;
+  padding: 0.95rem 1.2rem;
+  border-radius: 999px;
+  border: none;
+  background-color: var(--navy);
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.25s ease, transform 0.18s ease,
+              box-shadow 0.18s ease;
+}
+
+.rt-bookquote__submit:hover {
+  background-color: #0e1c68;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.25);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .rt-bookquote__inner {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .rt-bookquote {
+    padding: 3.5rem 1.5rem 4rem;
+  }
+
+  .rt-bookquote__form {
+    padding: 1.6rem 1.2rem 2rem;
+  }
+
+  .rt-bookquote__row {
+    grid-template-columns: 1fr;
+  }
+}

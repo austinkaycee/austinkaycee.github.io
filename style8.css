@@ -1,0 +1,1601 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* =========================================
+   BRAND COLORS
+========================================= */
+:root {
+  --navy: #13277e;  /* Your correct brand navy */
+  --gold: #C9A20B;
+  --white: #ffffff;
+}
+
+/* =========================================
+   GLOBAL RESET
+========================================= */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===============================
+   NAVBAR / HEADER (header.html)
+================================= */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navbar {
+  background-color: #fff;
+  padding: 1.2rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.logo a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.logo a img {
+  display: block;
+  height: 40px;
+  width: auto;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.8rem;
+}
+
+.nav-links a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #13277e;
+}
+
+.btn-signup {
+  background: linear-gradient(90deg, #fff9d9, #ffe78b);
+  color: #13277e !important;
+  padding: 0.6rem 1.4rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  border: 1px solid #e0e0e0;
+  transition: all 0.3s ease;
+}
+
+.btn-signup:hover {
+  background: linear-gradient(90deg, #fff2b0, #ffd46b);
+  color: #000 !important;
+}
+
+/* Header Styling */
+.main-header {
+  background-color: #ffffff;
+  padding: 15px 100px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  position: relative;
+  height: 94px;
+  z-index: 100;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-header .logo img {
+  height: 46px;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+}
+
+.main-nav ul li {
+  margin-left: 50px;
+  margin-top: 14px;
+}
+
+.main-nav ul li a {
+  text-decoration: none;
+  color: #6c6c6c;
+  transition: color 0.3s ease;
+  font-family: Arial, sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 100%;
+}
+
+/* Generic button base (for header, if needed) */
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  border: none;
+  height: 52px;
+  width: 150px;
+}
+
+.main-nav .btn {
+  margin-left: 30px;
+}
+
+/* Dropdown Styling */
+.nav-links li {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  list-style: none;
+  padding: 10px 0;
+  min-width: 200px;
+  z-index: 999;
+}
+
+.dropdown-menu li {
+  margin: 0;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 10px 20px;
+  color: #6c6c6c;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #13277e;
+  color: #fff;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* ===================================================================================================================
+   DATA ANALYTICS HERO SECTION (DA PAGE)  	DATA ANALYTICS HERO SECTION (DA PAGE)
+=================================================================================================================== */
+/* ===================================================================================================================
+   DATA ANALYTICS HERO SECTION (VIDEO BG CLEAN VERSION)
+=================================================================================================================== */
+:root {
+  --navy: #13277e;
+  --gold: #C9A20B;
+  --white: #ffffff;
+}
+
+/* Main hero wrapper */
+.rt-hero-da {
+  position: relative;
+  padding: 6rem 1.5rem 5rem;
+  background: transparent !important;   /* NO BLUE BACKGROUND */
+  color: var(--white);
+  overflow: hidden;
+}
+
+/* Full-size background video */
+.rt-hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  filter: none !important;              /* REMOVE DARKNESS */
+}
+
+/* Light transparent overlay (REMOVE COMPLETELY IF YOU WANT) */
+.rt-hero-da .rt-hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.65);   /* 45% dim */
+  pointer-events: none;
+}
+
+
+
+/* Inner grid layout */
+.rt-hero-da .rt-hero-inner {
+  position: relative;
+  z-index: 2;                           /* Above video */
+  max-width: 1120px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 3rem;
+  align-items: center;
+}
+
+/* Left column (text) */
+.rt-hero-left {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Badge */
+.rt-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(0,0,0,0.45);         /* light for readability */
+  border: 1px solid rgba(255,255,255,0.3);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 1rem;
+}
+
+.rt-hero-badge::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: #22c55e;
+  box-shadow: 0 0 12px rgba(34, 197, 94, 0.9);
+}
+
+/* Title */
+.rt-hero-title {
+  font-size: clamp(2.4rem, 3.2vw + 1rem, 3.4rem);
+  line-height: 1.1;
+  font-weight: 800;
+  color: var(--white);
+  margin: 0 0 1rem;
+}
+
+.rt-hero-title span {
+  color: var(--gold);                   /* GOLD highlight */
+}
+
+/* Subtitle */
+.rt-hero-subtitle {
+  max-width: 32rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.9);
+  margin: 0 0 1.5rem;
+}
+
+/* Skill tags */
+.rt-hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.75rem;
+}
+
+.rt-tag {
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.3);
+  font-size: 0.78rem;
+  color: var(--white);
+  background: rgba(0,0,0,0.45);
+}
+
+/* Buttons */
+.rt-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.rt-btn {
+  border-radius: 999px;
+  padding: 0.75rem 1.6rem;
+  font-size: 0.95rem;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: inline-flex;
+  justify-content: center;
+  font-weight: 500;
+}
+
+/* Primary button */
+.rt-btn-primary {
+  background: linear-gradient(135deg, var(--gold), #f5d971);
+  color: #111827;
+  box-shadow: 0 0 20px rgba(201,162,11,0.55);
+}
+
+.rt-btn-primary:hover {
+  transform: translateY(-1px) scale(1.02);
+}
+
+/* Ghost button */
+.rt-btn-ghost {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.6);
+  color: var(--white);
+}
+
+.rt-btn-ghost:hover {
+  border-color: var(--gold);
+}
+
+/* Note text */
+.rt-hero-note {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.9);
+}
+
+/* Right card */
+.rt-hero-right {
+  display: flex;
+  justify-content: center;
+}
+
+.rt-hero-card {
+  width: 100%;
+  max-width: 360px;
+  border-radius: 1.5rem;
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 1.4rem;
+  z-index: 2;
+}
+
+/* Card header */
+.rt-card-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.2rem;
+}
+
+.rt-pill {
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(0,0,0,0.45);
+  border: 1px solid rgba(255,255,255,0.3);
+  color: var(--white);
+  font-size: 0.75rem;
+}
+
+.rt-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  background: #22c55e;
+  box-shadow: 0 0 10px rgba(34,197,94,0.95);
+}
+
+/* Metrics grid */
+.rt-metric-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 0.6rem;
+}
+
+.rt-metric {
+  padding: 0.55rem;
+  border-radius: 0.9rem;
+  background: rgba(0,0,0,0.45);
+  border: 1px solid rgba(255,255,255,0.25);
+}
+
+.rt-metric-label {
+  font-size: 0.68rem;
+  color: #d8d8d8;
+}
+
+.rt-metric-value {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--white);
+}
+
+/* Chart preview */
+/* Chart container */
+/* Chart preview */
+.rt-chart-preview {
+  padding: 0.8rem;
+  border-radius: 1rem;
+  background: rgba(0,0,0,0.5);
+  border: 1px dashed rgba(255,255,255,0.3);
+  margin-bottom: 1.2rem;
+}
+
+/* Bars */
+.rt-chart-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.35rem;
+  height: 80px;
+  margin-bottom: 0.6rem;
+}
+
+.rt-chart-bars .bar {
+  flex: 1;
+  background: var(--gold);
+  border-radius: 6px 6px 0 0;
+  transform-origin: bottom;
+  animation: chartPulse 2.4s ease-in-out infinite alternate;
+}
+
+/* individual bars */
+.rt-chart-bars .bar-sales      { height: 40%; animation-delay: 0.1s; }
+.rt-chart-bars .bar-marketing  { height: 70%; animation-delay: 0.3s; }
+.rt-chart-bars .bar-operations { height: 90%; animation-delay: 0.5s; }
+
+@keyframes chartPulse {
+  from { transform: scaleY(0.6); }
+  to   { transform: scaleY(1); }
+}
+
+/* Labels under chart */
+.rt-chart-footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--white);
+  opacity: 0.9;
+}
+
+.rt-chart-footer span {
+  flex: 1;
+  text-align: center;
+}
+/* ===================================================================================================
+  END	END		END DATA ANALYTICS HERO SECTION (VIDEO BG)		END 	END		END
+=================================================================================================== */
+/* ================================
+   COURSE OVERVIEW SECTION
+================================ */
+.da-overview {
+  background: #f5f7fb;
+  padding: 4rem 0;
+}
+
+.da-overview-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+/* LEFT TEXT */
+.da-overview-text h2 {
+  font-size: 2.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.da-overview-text h3 {
+  font-size: 1rem;
+  margin: 0 0 0.4rem;
+  color: #111827;
+}
+
+.da-overview-text p {
+  margin: 0 0 1.1rem;
+  color: #4b5563;
+  font-size: 0.96rem;
+  line-height: 1.6;
+}
+
+.da-overview-cta {
+  margin-top: 1rem;
+}
+
+/* RIGHT CARDS */
+.da-overview-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.da-overview-card {
+  display: flex;
+  align-items: center;
+  padding: 1.1rem 1.4rem;
+  border-radius: 12px;
+  color: #ffffff;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.15);
+}
+
+.da-overview-card .da-card-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+.da-overview-card .da-card-icon i {
+  font-size: 1.3rem;
+}
+
+/* Card content */
+.da-card-content h4 {
+  margin: 0 0 0.25rem;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.da-card-content p {
+  margin: 0 0 0.4rem;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.da-card-meta {
+  font-size: 0.8rem;
+  opacity: 0.9;
+}
+
+/* Individual card colours (aligned to your brand) */
+.da-card-python {
+  background: #13277e;
+}
+
+.da-card-sql {
+  background: #0d8a5a;
+}
+
+.da-card-powerbi {
+  background: #C9A20B;
+  color: #111827;
+}
+
+.da-card-powerbi .da-card-icon {
+  background: rgba(0,0,0,0.15);
+}
+
+.da-card-ml {
+  background: #111827;
+}
+
+/* Responsive layout */
+@media (max-width: 900px) {
+  .da-overview-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .da-overview-cards {
+    max-width: 480px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+/* Animation for Course Overview section */
+.overview-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.overview-reveal.overview-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Fix card heading visibility */
+.da-card-python h4 { 
+  color: #C9A20B !important; 
+}
+
+.da-card-sql h4 { 
+  color:  #13277e !important; 
+}
+
+.da-card-powerbi h4 { 
+  color:  #13277e !important; 
+}
+
+.da-card-ml h4 { 
+  color: #C9A20B !important; 
+}
+
+
+
+/* =========================================
+   GLOBAL HEADING COLOR OVERRIDE
+   (Except video section)
+========================================= */
+
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6 {
+  color: #13277e;
+}
+
+/* Newsletter / footer: lock background + text colour */
+.qei-newsletter {
+  background: radial-gradient(circle at top, #1d293b 0%, #020617 60%, #000 100%) !important;
+  color: #e5e7eb;
+}
+
+.qei-newsletter h1,
+.qei-newsletter h2,
+.qei-newsletter h3,
+.qei-newsletter h4,
+.qei-newsletter h5,
+.qei-newsletter h6 {
+  color: #ffffff !important;
+}
+
+
+/* ========================================================================================
+   WHAT YOU’LL LEARN (SIDEBAR)
+======================================================================================================= */
+.da-learn {
+  padding: 4rem 1rem;
+  background: #f4f4f7;
+}
+
+.da-learn-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  gap: 2.8rem;
+  align-items: center;
+}
+
+/* Left column */
+.da-learn-text h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--navy);
+  margin-bottom: 1rem;
+}
+
+.da-learn-intro {
+  font-size: 0.98rem;
+  color: #4b5563;
+  margin-bottom: 1.5rem;
+}
+
+.da-learn-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.da-learn-list li {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0.8rem;
+  align-items: flex-start;
+}
+
+.learn-icon-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  background: var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #111827;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.da-learn-list h4 {
+  margin: 0 0 0.2rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.da-learn-list p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #374151;
+}
+
+/* Right sidebar */
+.da-learn-aside {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.da-learn-photo {
+  position: relative;
+  border-radius: 1.3rem;
+  overflow: hidden;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+}
+
+.da-learn-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.da-learn-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.6), transparent 50%);
+}
+
+.da-learn-photo-tag {
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(201,162,11,0.95);
+  color: #111827;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.da-learn-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.da-learn-badges span {
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  background: #111827;
+  color: #f9fafb;
+  font-size: 0.8rem;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Animation base for this section */
+.learn-reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.learn-reveal.learn-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .da-learn-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .da-learn-aside {
+    max-width: 420px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+/* ========================================================================================
+  END 			END    	END			 WHAT YOU’LL LEARN (SIDEBAR)
+======================================================================================================= */
+
+/* ============================
+   COURSE CURRICULUM ACCORDION
+============================ */
+.da-curriculum {
+  padding: 4rem 1rem;
+  background: #ffffff;
+}
+
+.da-curriculum-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--navy);
+  text-align: center;
+  margin-bottom: 0.75rem;
+}
+
+.da-curriculum-intro {
+  max-width: 680px;
+  margin: 0 auto 2rem;
+  text-align: center;
+  font-size: 0.96rem;
+  color: #4b5563;
+}
+
+.da-accordion {
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.da-accordion-item {
+  border-radius: 0.9rem;
+  border: 1px solid #e5e7eb;
+  margin-bottom: 0.75rem;
+  background: #f9fafb;
+  overflow: hidden;
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.04);
+}
+
+.da-accordion-header {
+  width: 100%;
+  background: #f3f4ff;
+  border: none;
+  outline: none;
+  padding: 0.9rem 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  cursor: pointer;
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: var(--navy);
+}
+
+.da-accordion-item:nth-child(odd) .da-accordion-header {
+  background: #eef2ff;
+}
+
+.da-accordion-header:hover {
+  background: #e0e7ff;
+}
+
+.da-accordion-icon {
+  width: 20px;
+  height: 20px;
+  position: relative;
+}
+
+.da-accordion-icon::before,
+.da-accordion-icon::after {
+  content: "";
+  position: absolute;
+  inset: 50%;
+  width: 12px;
+  height: 2px;
+  background: #111827;
+  transform: translate(-50%, -50%);
+  transition: transform 0.2s ease;
+}
+
+.da-accordion-icon::after {
+  transform: translate(-50%, -50%) rotate(90deg); /* vertical bar */
+}
+
+.da-accordion-item.is-open .da-accordion-icon::after {
+  transform: translate(-50%, -50%) rotate(0deg);   /* hide vertical -> minus */
+}
+
+.da-accordion-body {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 1.1rem;
+  background: #ffffff;
+  transition: max-height 0.25s ease-out, padding-top 0.2s ease, padding-bottom 0.2s ease;
+}
+
+.da-accordion-item.is-open .da-accordion-body {
+  padding-top: 0.7rem;
+  padding-bottom: 0.85rem;
+}
+
+.da-accordion-body p {
+  margin: 0 0 0.4rem;
+  font-size: 0.9rem;
+  color: #374151;
+}
+
+.da-accordion-body ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.da-accordion-body li {
+  font-size: 0.88rem;
+  color: #4b5563;
+  margin-bottom: 0.25rem;
+}
+
+/* Small screens */
+@media (max-width: 600px) {
+  .da-curriculum {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .da-accordion-header span:first-child {
+    font-size: 0.92rem;
+  }
+}
+
+
+/* =========================================
+   NEWSLETTER SECTION
+========================================= */
+.qei-newsletter {
+  position: relative;
+  overflow: clip;
+  padding: 56px 16px 64px;
+  color: #eaf0ff;
+  isolation: isolate;
+}
+
+/* Gradient background */
+.qei-newsletter-bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(
+      1100px 600px at 85% 70%,
+      rgba(255, 255, 255, 0.08) 0%,
+      rgba(255, 255, 255, 0) 60%
+    ),
+    radial-gradient(
+      900px 500px at 15% 30%,
+      rgba(255, 255, 255, 0.07) 0%,
+      rgba(255, 255, 255, 0) 60%
+    ),
+    linear-gradient(180deg, #4b465a 0%, #0a1d78 60%, #061e64 100%);
+  box-shadow: inset 0 40px 60px rgba(0, 0, 0, 0.25);
+}
+
+.qei-newsletter-wrap {
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.qei-newsletter-heading {
+  font-size: clamp(1.8rem, 2.4vw, 2.1rem);
+  font-weight: 700;
+  margin: 0 0 1.5rem;
+}
+
+.qei-newsletter-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.qei-newsletter-form input {
+  min-width: 240px;
+  max-width: 320px;
+  padding: 0.6rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid #9ca3af;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.qei-newsletter-form button {
+  padding: 0.6rem 1.4rem;
+  border-radius: 999px;
+  border: none;
+  background-color: var(--gold);
+  color: #111827;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.qei-newsletter-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  justify-content: center;
+  font-size: 0.86rem;
+  color: #9ca3af;
+  margin-bottom: 0.5rem;
+}
+
+.qei-newsletter-links a {
+  color: #e5e7eb;
+  text-decoration: none;
+}
+
+.qei-newsletter-copy {
+  font-size: 0.8rem;
+  color: #6b7280;
+  margin: 0;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+/* Utility */
+.qei-newsletter-sep {
+  color: #4b5563;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+/* Extra Footer – single-line row */
+.qei-footer-extras {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  max-width: 100%;
+  color: #e5e7eb;
+  font-size: 0.9rem;
+}
+
+/* Horizontal contact items */
+.qei-footer-contact {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.qei-footer-contact span {
+  white-space: nowrap;
+}
+
+/* Social icons inline right */
+.qei-footer-social-icons {
+  display: flex;
+  gap: 6px;
+}
+
+.qei-footer-social-icons a {
+  background: rgba(255,255,255,0.15);
+  padding: 8px;
+  border-radius: 50%;
+  backdrop-filter: blur(3px);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.25s;
+}
+
+.qei-footer-social-icons i {
+  font-size: 0.95rem;
+  color: #eaf0ff;
+  transition: 0.25s;
+}
+
+.qei-footer-social-icons a:hover {
+  background: var(--gold);
+}
+.qei-footer-social-icons a:hover i {
+  color: #111827;
+}
+
+/* Desktop spacing */
+@media (min-width: 900px) {
+  .qei-footer-extras {
+    justify-content: space-between;
+    padding-inline: 2rem;
+  }
+}
+
+/* =========================================
+   R-TECH CHATBOT
+========================================= */
+.rtech-chatbot {
+  position: fixed;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  z-index: 999;
+}
+
+.chatbot-toggle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--gold);
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.chatbot-toggle img {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+}
+
+.chatbot-box {
+  position: absolute;
+  bottom: 74px;
+  right: 0;
+  width: 320px;
+  max-height: 420px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.35);
+  display: none;
+  overflow: hidden;
+}
+
+.chatbot-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  background-color: var(--navy);
+  color: #ffffff;
+}
+
+.bot-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.bot-info img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.chatbot-header button {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.chatbot-content {
+  padding: 0.75rem 1rem;
+  max-height: 260px;
+  overflow-y: auto;
+  background-color: #f9fafb;
+}
+
+.bot-msg,
+.user-msg {
+  font-size: 0.87rem;
+  margin-bottom: 0.5rem;
+  padding: 0.55rem 0.75rem;
+  border-radius: 12px;
+  max-width: 90%;
+}
+
+.bot-msg {
+  background-color: #e5e7eb;
+  color: #111827;
+  align-self: flex-start;
+}
+
+.user-msg {
+  background-color: var(--gold);
+  color: #111827;
+  margin-left: auto;
+  text-align: right;
+}
+
+.chatbot-input {
+  display: flex;
+  gap: 0.4rem;
+  padding: 0.6rem 0.75rem 0.75rem;
+  background-color: #ffffff;
+}
+
+.chatbot-input input {
+  flex: 1;
+  border-radius: 999px;
+  border: 1px solid #d1d5db;
+  padding: 0.5rem 0.8rem;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.chatbot-input button {
+  border-radius: 999px;
+  border: none;
+  background-color: var(--navy);
+  color: #ffffff;
+  padding: 0 0.9rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+/* ==========================================================
+   GET CERTIFIED CTA SECTION
+========================================================== */
+/* ==========================================================
+   GET CERTIFIED CTA SECTION (R-TECH)
+========================================================== */
+.rt-cert {
+  background-color: var(--navy);     /* your brand navy */
+  color: #ffffff;
+  position: relative;
+  overflow: visible;                 /* allow image to pop a bit */
+}
+
+/* inner wrapper behaves like the .row with fixed height in the template */
+.rt-cert__wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 5vw;                 /* small background height */
+  min-height: 250px;                 /* like the template: row height */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+/* TEXT SIDE */
+.rt-cert__content {
+  max-width: 480px;
+}
+
+.rt-cert__title {
+  font-size: clamp(2rem, 2.4vw, 2.4rem);
+  font-weight: 800;
+  margin: 0 0 0.6rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #ffffff;
+}
+
+.rt-cert__title i {
+  font-size: 1.6rem;
+}
+
+.rt-cert__text {
+  font-size: 0.98rem;
+  line-height: 1.8;
+  margin: 0 0 1.4rem;
+  color: #e5e7eb;
+}
+
+/* BUTTON */
+.rt-cert__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background-color: var(--gold);
+  color: #111827;
+  font-weight: 700;
+  padding: 0.8rem 1.7rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: 0.25s ease;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.25);
+}
+
+.rt-cert__cta:hover {
+  background-color: #f0c40d;
+  transform: translateY(-2px);
+}
+
+/* IMAGE SIDE â€“ smaller bg, image sits nicely and a bit out */
+.rt-cert__visual img {
+  display: block;
+  max-height: 220px;                /* controls image size */
+  margin-top: 10px;                 /* lowers image slightly */
+  margin-bottom: -20px;             /* lets it come out a little */
+  filter: drop-shadow(0 8px 18px rgba(0,0,0,0.25));
+}
+
+/* RESPONSIVE */
+@media (max-width: 860px) {
+  .rt-cert__wrap {
+    flex-direction: column;
+    text-align: center;
+    min-height: auto;
+    padding: 1.5rem 1.5rem;
+  }
+
+  .rt-cert__content {
+    max-width: 100%;
+  }
+
+  .rt-cert__visual img {
+    margin: 10px auto -20px;
+  }
+}
+
+/* Scroll animation for Get Certified section */
+.rt-cert {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.rt-cert.rt-cert-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* ==========================================================
+   END 		END 	END 	GET CERTIFIED CTA SECTION
+========================================================== */
+
+/* ============================
+   ENROLLMENT & PAYMENT SECTION
+============================ */
+.da-enrol {
+  padding: 4rem 1rem;
+  background: #f4f5fb;
+}
+
+.da-enrol-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 2.5rem;
+  align-items: flex-start;
+}
+
+/* LEFT INFO */
+.da-enrol-info h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--navy);
+  margin-bottom: 0.8rem;
+}
+
+.da-enrol-intro {
+  font-size: 0.98rem;
+  color: #4b5563;
+  margin-bottom: 1.2rem;
+}
+
+.da-enrol-points {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.3rem;
+}
+
+.da-enrol-points li {
+  font-size: 0.9rem;
+  color: #374151;
+  margin-bottom: 0.35rem;
+  position: relative;
+  padding-left: 1.2rem;
+}
+
+.da-enrol-points li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--gold);
+}
+
+/* badge */
+.da-enrol-badge {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.15rem;
+  padding: 0.6rem 0.9rem;
+  border-radius: 0.9rem;
+  background: #e0f2fe;
+  border: 1px solid #bae6fd;
+  font-size: 0.88rem;
+  color: #0f172a;
+  margin-bottom: 1.4rem;
+}
+
+.da-enrol-badge span {
+  opacity: 0.9;
+}
+
+.da-enrol-badge strong {
+  font-weight: 700;
+}
+
+/* payment logos text */
+.da-payment-logos {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.86rem;
+  color: #4b5563;
+}
+
+.da-payment-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.pay-badge {
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  background: #111827;
+  color: #f9fafb;
+  font-size: 0.78rem;
+}
+
+/* RIGHT FORM */
+.da-enrol-form-wrap {
+  max-width: 420px;
+  width: 100%;
+  margin-left: auto;
+}
+
+.da-enrol-form {
+  background: #ffffff;
+  border-radius: 1.1rem;
+  padding: 1.6rem 1.5rem 1.5rem;
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.12);
+  border: 1px solid #e5e7eb;
+}
+
+.da-enrol-form h3 {
+  margin: 0 0 1rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.da-form-row {
+  margin-bottom: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.da-form-row label {
+  font-size: 0.85rem;
+  color: #4b5563;
+  font-weight: 500;
+}
+
+.da-form-row input,
+.da-form-row select {
+  border-radius: 0.6rem;
+  border: 1px solid #d1d5db;
+  padding: 0.55rem 0.7rem;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.da-form-row input:focus,
+.da-form-row select:focus {
+  border-color: var(--navy);
+  box-shadow: 0 0 0 1px rgba(19, 39, 126, 0.2);
+}
+
+/* payment radio row */
+.da-payment-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  font-size: 0.85rem;
+}
+
+.da-payment-options label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  cursor: pointer;
+}
+
+.da-payment-options input[type="radio"] {
+  accent-color: var(--navy);
+}
+
+.da-enrol-submit {
+  width: 100%;
+  margin-top: 0.4rem;
+  justify-content: center;
+}
+
+.da-enrol-note {
+  margin: 0.7rem 0 0;
+  font-size: 0.78rem;
+  color: #6b7280;
+}
+
+/* Animation base for this section */
+.enrol-reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.enrol-reveal.enrol-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .da-enrol-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .da-enrol-form-wrap {
+    margin: 0 auto;
+  }
+}
+
+/* ============================
+   PRICE BOX FOR ENROL SECTION
+============================ */
+.da-price-box {
+  background: #ffffff;
+  border: 2px solid var(--gold);
+  border-radius: 1rem;
+  padding: 1.1rem 1.3rem;
+  margin: 0 0 1.5rem;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  text-align: left;
+  max-width: 340px;
+}
+
+.da-price-label {
+  font-size: 0.9rem;
+  color: #4b5563;
+  font-weight: 500;
+}
+
+.da-price-amount {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--navy);
+  margin: 0.3rem 0;
+}
+
+.da-price-note {
+  font-size: 0.8rem;
+  color: #6b7280;
+}

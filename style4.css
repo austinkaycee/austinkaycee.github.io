@@ -1,0 +1,910 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+/* =========================================
+   BRAND COLORS
+========================================= */
+:root {
+    --navy: #001f3f;
+    --gold: #C9A20B;
+    --white: #ffffff;
+}
+
+/* =========================================
+   GLOBAL RESET
+========================================= */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* ===============================
+   NAVBAR / HEADER
+   (styles used by header.html)
+================================= */
+.navbar {
+  background-color: #fff;
+  padding: 1.2rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.logo a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.logo a img {
+  display: block;
+  height: 40px;
+  width: auto;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.8rem;
+}
+
+.nav-links a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #13277e;
+}
+
+.btn-signup {
+  background: linear-gradient(90deg, #fff9d9, #ffe78b);
+  color: #13277e !important;
+  padding: 0.6rem 1.4rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  border: 1px solid #e0e0e0;
+  transition: all 0.3s ease;
+}
+
+.btn-signup:hover {
+  background: linear-gradient(90deg, #fff2b0, #ffd46b);
+  color: #000 !important;
+}
+
+/* Header Styling */
+.main-header {
+  background-color: #ffffff;
+  padding: 15px 100px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  position: relative;
+  height: 94px;
+  z-index: 100;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-header .logo img {
+  height: 46px;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+}
+
+.main-nav ul li {
+  margin-left: 50px;
+  margin-top: 14px;
+}
+
+.main-nav ul li a {
+  text-decoration: none;
+  color: #6c6c6c;
+  transition: color 0.3s ease;
+  font-family: Arial, sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 100%;
+}
+
+/* Generic button base (for header, if needed) */
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  border: none;
+  height: 52px;
+  width: 150px;
+}
+
+.main-nav .btn {
+  margin-left: 30px;
+}
+
+/* Dropdown Styling */
+.nav-links li {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  list-style: none;
+  padding: 10px 0;
+  min-width: 200px;
+  z-index: 999;
+}
+
+.dropdown-menu li {
+  margin: 0;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 10px 20px;
+  color: #6c6c6c;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #13277e;
+  color: #fff;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* =========================================
+   ACADEMIC & TECHNICAL REPORT HERO
+   (video background section)
+========================================= */
+
+.qei-report-hero {
+  position: relative;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  color: var(--white);
+}
+
+/* Background video */
+.qei-report-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* Dark gradient overlay for readability */
+.qei-report-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35); /* light dim effect so text stays readable */
+  z-index: 2;
+}
+
+/* Layout container */
+.qei-report-inner {
+  position: relative;
+  z-index: 3;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 3rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3.5rem 0;
+}
+
+/* Left text */
+.qei-report-text {
+  max-width: 620px;
+}
+
+.qei-report-text h1 {
+  font-size: clamp(2.4rem, 3.4vw, 3.3rem);
+  margin-bottom: 1.1rem;
+  color: var(--gold);
+}
+
+.qei-report-text p {
+  font-size: 1.02rem;
+  line-height: 1.7;
+  margin-bottom: 1.8rem;
+}
+
+/* Tags / chips */
+.qei-report-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.qei-report-tags a {
+  display: inline-block;
+  padding: 0.55rem 1.2rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(0, 0, 0, 0.25);
+  color: var(--white);
+  font-size: 0.85rem;
+  text-decoration: none;
+  backdrop-filter: blur(4px);
+  transition: background 0.25s ease, transform 0.2s ease;
+}
+
+.qei-report-tags a:hover {
+  background: rgba(201, 162, 11, 0.85);
+  transform: translateY(-1px);
+}
+
+/* Right card */
+.qei-report-card {
+  max-width: 320px;
+  padding: 2rem 1.8rem;
+  border-radius: 16px;
+  background: var(--white);
+  color: var(--navy);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.35);
+}
+
+.qei-report-card h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.9rem;
+}
+
+.qei-report-card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 1.7rem;
+}
+
+/* Button specific to this section (no clash with .btn) */
+.qei-report-btn {
+  display: inline-block;
+  padding: 0.75rem 1.6rem;
+  border-radius: 999px;
+  background: var(--gold);
+  color: var(--navy);
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: background 0.25s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.qei-report-btn:hover {
+  background: #e2b90e;
+  transform: translateY(-1px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive tweaks */
+@media (max-width: 900px) {
+  .qei-report-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .qei-report-card {
+    align-self: stretch;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .qei-report-hero {
+    min-height: 80vh;
+  }
+
+  .qei-report-inner {
+    padding: 2.8rem 0 3.3rem;
+  }
+
+  .qei-report-text h1 {
+    font-size: 2.1rem;
+  }
+}
+/* ===========================================================================================================
+ END END  END END END   ACADEMIC & TECHNICAL REPORT HERO		(video background section)
+=========================================================================================================== */
+    
+    
+/* =========================================
+   TRUST / UNIVERSITIES STRIP
+========================================= */
+
+.qei-trust-section {
+  background: #ffffff;
+  padding: 2.8rem 5vw 3.2rem;
+}
+
+.qei-trust-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.qei-trust-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #13277E;
+  margin-bottom: 2.5rem;
+}
+
+.qei-trust-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.qei-trust-logos img {
+  max-height: 46px;
+  width: auto;
+  opacity: 0.65;
+  filter: grayscale(100%);
+  transition: opacity 0.25s ease, filter 0.25s ease, transform 0.2s ease;
+}
+
+.qei-trust-logos img:hover {
+  opacity: 0.95;
+  filter: grayscale(0%);
+  transform: translateY(-2px);
+}
+/* =========================================
+   TRUST / UNIVERSITIES STRIP
+========================================= */
+    
+    
+/* =========================================================================================================
+   WHAT WE OFFER / WHAT YOU WILL GET
+========================================================================================================= */
+
+.qei-offer-section {
+  background: #f9fafb;
+  padding: 3.5rem 5vw 4rem;
+}
+
+.qei-offer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 2.5rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Card */
+.qei-offer-card {
+  flex: 1 1 320px;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 2.2rem 2.1rem;
+  box-shadow: 0 10px 35px rgba(15, 23, 42, 0.07);
+  border: 1px solid #f3f4f6;
+}
+
+.qei-offer-top {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin-bottom: 1.1rem;
+}
+
+.qei-offer-img {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.15);
+}
+
+.qei-offer-card h2 {
+  margin: 0;
+  font-size: 1.6rem;
+  color: var(--navy);
+}
+
+.qei-offer-card p {
+  font-size: 0.98rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: #111827;
+}
+
+.qei-offer-card ul {
+  padding-left: 1.2rem;
+  margin: 0;
+  color: #111827;
+}
+
+.qei-offer-card li {
+  margin-bottom: 0.4rem;
+  font-size: 0.96rem;
+}
+
+/* Scroll animation base state */
+.qei-scroll-animate {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* When in view */
+.qei-scroll-animate.qei-in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .qei-offer-section {
+    padding: 2.8rem 5vw 3.2rem;
+  }
+
+  .qei-offer-card {
+    padding: 1.8rem 1.6rem;
+  }
+}
+/* =========================================================================================================================================
+    ENDt	END 		 END  WHAT WE OFFER / WHAT YOU WILL GET
+========================================================================================================================================= */
+
+/* =========================================
+   REQUEST FORM SECTION
+========================================= */
+.qei-request-form-section {
+    padding: 4rem 5vw;
+    background: #f8f9fd;
+}
+
+.qei-request-container {
+    max-width: 850px;
+    margin: auto;
+    background: white;
+    padding: 2.8rem 2.6rem;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+}
+
+.qei-request-title {
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #13277E;
+    margin-bottom: 0.7rem;
+}
+
+.qei-request-subtitle {
+    text-align: center;
+    margin-bottom: 2.4rem;
+    color: #374151;
+    line-height: 1.5;
+}
+
+/* Form styling */
+.qei-request-form label {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 0.35rem;
+    font-weight: 500;
+}
+
+.qei-request-form input,
+.qei-request-form select,
+.qei-request-form textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    outline: none;
+}
+
+.qei-request-form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.qei-form-heading {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #13277E;
+    margin: 2rem 0 1rem;
+}
+
+/* Two-column layout */
+.qei-form-group {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.2rem;
+}
+
+.qei-form-group div {
+    flex: 1;
+}
+
+.qei-note {
+    font-size: 0.88rem;
+    margin: 1.5rem 0;
+    color: #555;
+}
+
+/* Submit button */
+.qei-submit-btn {
+    width: 100%;
+    padding: 1rem;
+    background: #C9A20B;
+    color: #13277E;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 35px;
+    cursor: pointer;
+}
+
+.qei-submit-btn:hover {
+    background: #e0bb22;
+}
+/* =========================================
+   REQUEST FORM SECTION
+========================================= *
+    
+    
+    
+/* =========================================================================
+   NEWSLETTER SECTION
+========================================================================= */
+.qei-newsletter {
+  position: relative;
+  overflow: clip;
+  padding: 56px 16px 64px;
+  color: #eaf0ff;
+  isolation: isolate;
+}
+
+/* Gradient background */
+.qei-newsletter-bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(
+      1100px 600px at 85% 70%,
+      rgba(255, 255, 255, 0.08) 0%,
+      rgba(255, 255, 255, 0) 60%
+    ),
+    radial-gradient(
+      900px 500px at 15% 30%,
+      rgba(255, 255, 255, 0.07) 0%,
+      rgba(255, 255, 255, 0) 60%
+    ),
+    linear-gradient(180deg, #4b465a 0%, #0a1d78 60%, #061e64 100%);
+  box-shadow: inset 0 40px 60px rgba(0, 0, 0, 0.25);
+}
+
+.qei-newsletter-wrap {
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.qei-newsletter-heading {
+  font-size: clamp(1.8rem, 2.4vw, 2.1rem);
+  font-weight: 700;
+  margin: 0 0 1.5rem;
+}
+
+.qei-newsletter-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.qei-newsletter-form input {
+  min-width: 240px;
+  max-width: 320px;
+  padding: 0.6rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid #9ca3af;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.qei-newsletter-form button {
+  padding: 0.6rem 1.4rem;
+  border-radius: 999px;
+  border: none;
+  background-color: var(--gold);
+  color: #111827;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.qei-newsletter-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  justify-content: center;
+  font-size: 0.86rem;
+  color: #9ca3af;
+  margin-bottom: 0.5rem;
+}
+
+.qei-newsletter-links a {
+  color: #e5e7eb;
+  text-decoration: none;
+}
+
+.qei-newsletter-copy {
+  font-size: 0.8rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* Utility */
+.qei-newsletter-sep {
+  color: #4b5563;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+/* Extra Footer Content – cleaner layout */
+/* ================= EXTRA FOOTER LAYOUT ================= */
+/* =================== SINGLE-LINE FOOTER ROW ====================== */
+.qei-footer-extras {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: nowrap;        /* 🔥 prevents wrapping */
+  white-space: nowrap;      /* 🔥 keeps text inline */
+  max-width: 100%;
+  color: #e5e7eb;
+  font-size: 0.9rem;
+}
+
+/* Horizontal contact items */
+.qei-footer-contact {
+  display: flex;
+  gap: 1.5rem;   /* reduced spacing so icons fit */
+}
+
+.qei-footer-contact span {
+  white-space: nowrap;
+}
+
+/* Social icons inline right */
+.qei-footer-social-icons {
+  display: flex;
+  gap: 6px;      /* 🔥 tighter spacing */
+}
+
+.qei-footer-social-icons a {
+  background: rgba(255,255,255,0.15);
+  padding: 8px;
+  border-radius: 50%;
+  backdrop-filter: blur(3px);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.25s;
+}
+
+.qei-footer-social-icons i {
+  font-size: 0.95rem;
+  color: #eaf0ff;
+  transition: 0.25s;
+}
+
+.qei-footer-social-icons a:hover {
+  background: var(--gold);
+}
+.qei-footer-social-icons a:hover i {
+  color: #111827;
+}
+
+/* nice copyright spacing */
+.qei-newsletter-copy {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+/* Desktop spacing to spread them evenly */
+@media (min-width: 900px) {
+  .qei-footer-extras {
+    justify-content: space-between;
+    padding-inline: 2rem;
+  }
+}
+/* =========================================================================================
+  END 		END 		END  NEWSLETTER SECTION		END END 
+=============================================================================================== */
+/* =========================================================================================
+  END 		END 		END  NEWSLETTER SECTION		END END 
+=============================================================================================== */
+
+
+/* =========================================
+   R-TECH CHATBOT
+========================================= */
+.rtech-chatbot {
+  position: fixed;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  z-index: 999;
+}
+
+.chatbot-toggle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--gold);
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.chatbot-toggle img {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+}
+
+.chatbot-box {
+  position: absolute;
+  bottom: 74px;
+  right: 0;
+  width: 320px;
+  max-height: 420px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.35);
+  display: none;
+  overflow: hidden;
+}
+
+.chatbot-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  background-color: var(--navy);
+  color: #ffffff;
+}
+
+.bot-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.bot-info img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.chatbot-header button {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.chatbot-content {
+  padding: 0.75rem 1rem;
+  max-height: 260px;
+  overflow-y: auto;
+  background-color: #f9fafb;
+}
+
+.bot-msg,
+.user-msg {
+  font-size: 0.87rem;
+  margin-bottom: 0.5rem;
+  padding: 0.55rem 0.75rem;
+  border-radius: 12px;
+  max-width: 90%;
+}
+
+.bot-msg {
+  background-color: #e5e7eb;
+  color: #111827;
+  align-self: flex-start;
+}
+
+.user-msg {
+  background-color: var(--gold);
+  color: #111827;
+  margin-left: auto;
+  text-align: right;
+}
+
+.chatbot-input {
+  display: flex;
+  gap: 0.4rem;
+  padding: 0.6rem 0.75rem 0.75rem;
+  background-color: #ffffff;
+}
+
+.chatbot-input input {
+  flex: 1;
+  border-radius: 999px;
+  border: 1px solid #d1d5db;
+  padding: 0.5rem 0.8rem;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.chatbot-input button {
+  border-radius: 999px;
+  border: none;
+  background-color: var(--navy);
+  color: #ffffff;
+  padding: 0 0.9rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+/* =======================================================================
+  END		END		END 	R-TECH CHATBOT		END 	END
+====================================================================================== */

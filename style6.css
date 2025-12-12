@@ -1,0 +1,228 @@
+/* ================= VIDEO HERO ================= */
+.edu-hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  padding: 4.5rem 1rem 4rem;
+  color: #ffffff;
+}
+
+/* Video fills the background */
+.edu-video-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+
+/* Content sits above video */
+.edu-hero-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.edu-hero-text {
+  max-width: 640px;
+}
+
+.edu-hero-title {
+  font-size: clamp(2.1rem, 3.4vw, 3rem);
+  font-weight: 800;
+  margin: 0 0 1rem;
+}
+
+.edu-hero-subtext {
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.88);
+  margin: 0;
+}
+
+/* Buttons */
+.edu-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.edu-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1.8rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.edu-btn-primary {
+  background: var(--gold, #fbbf24);
+  color: #111827;
+  border: none;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.25);
+}
+
+.edu-btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.28);
+}
+
+.edu-btn-outline {
+  border: 2px solid #ffffff;
+  background: transparent;
+  color: #ffffff;
+}
+
+.edu-btn-outline:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* Mobile tweak */
+@media (max-width: 768px) {
+  .edu-hero {
+    text-align: center;
+  }
+
+  .edu-hero-text {
+    margin: 0 auto;
+  }
+
+  .edu-hero-actions {
+    justify-content: center;
+  }
+}
+
+
+
+/* Dashboard container */
+/* DASHBOARD SECTION */
+.edu-platform-dashboards {
+  padding: 3.5rem 0 4rem;
+  background: #f4f6fb;
+}
+
+/* TOP LEVEL TOGGLE: High School / University */
+.edu-level-toggle {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.edu-level-btn {
+  padding: 0.55rem 1.6rem;
+  border-radius: 999px;
+  border: 2px solid #13277e;
+  background: transparent;
+  color: #13277e;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.edu-level-btn.active {
+  background: #13277e;
+  color: #ffffff;
+}
+
+/* Show / Hide dashboards */
+.edu-dashboard {
+  display: none;
+}
+
+.edu-dashboard.active {
+  display: block;
+}
+
+/* FILTER BAR (Science / Commercial / Arts etc.) */
+.edu-filter-bar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.edu-filter-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.edu-filter-btn {
+  padding: 0.4rem 1.1rem;
+  border-radius: 999px;
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  font-size: 0.85rem;
+  color: #111827;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.edu-filter-btn.active {
+  border-color: #13277e;
+  background: #13277e;
+  color: #ffffff;
+}
+
+/* Cards grid */
+.edu-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.8rem;
+}
+
+/* Single card */
+.edu-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 1.5rem 1.4rem;
+  box-shadow: 0 10px 26px rgba(15, 23, 42, 0.06);
+}
+
+.edu-card-tag {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #6b7280;
+  margin-bottom: 0.6rem;
+}
+
+.edu-card-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #13277e;
+  margin: 0 0 0.6rem;
+}
+
+.edu-card-text {
+  font-size: 0.9rem;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+/* Hide card when filtered out */
+.edu-card.hidden {
+  display: none;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .edu-level-toggle {
+    justify-content: center;
+  }
+
+  .edu-filter-bar {
+    justify-content: center;
+  }
+}
